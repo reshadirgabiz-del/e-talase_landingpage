@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Primary meta -->
+<title>e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace</title>
+<meta name="description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama, tanpa kartu kredit." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://e-talase.com/" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://e-talase.com/" />
+<meta property="og:site_name" content="e-talase" />
+<meta property="og:title" content="e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace" />
+<meta property="og:description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama, tanpa kartu kredit." />
+<meta property="og:image" content="https://e-talase.com/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="e-talase — Toko kamu, aturan kamu." />
+<meta property="og:locale" content="id_ID" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@etalase" />
+<meta name="twitter:title" content="e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace" />
+<meta name="twitter:description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama." />
+<meta name="twitter:image" content="https://e-talase.com/og-image.png" />
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://e-talase.com/#organization",
+      "name": "e-talase",
+      "url": "https://e-talase.com",
+      "logo": { "@type": "ImageObject", "url": "https://e-talase.com/favicon-96x96.png" },
+      "description": "Platform toko online untuk seller mandiri Indonesia.",
+      "foundingLocation": { "@type": "Place", "addressCountry": "ID" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://e-talase.com/#website",
+      "url": "https://e-talase.com",
+      "name": "e-talase",
+      "publisher": { "@id": "https://e-talase.com/#organization" },
+      "inLanguage": "id-ID"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://e-talase.com/#app",
+      "name": "e-talase",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://app.e-talase.com",
+      "description": "Buat toko online sendiri tanpa urusan teknis — server, domain, sertifikat SSL, dan update kami yang tangani.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "IDR",
+        "description": "Paket Starter gratis di bulan pertama"
+      },
+      "publisher": { "@id": "https://e-talase.com/#organization" }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+/* ── Design tokens ─────────────────────────────────────────────────────── */
+:root {
+  --paper:   #f4ede0;
+  --card:    #fbf6ec;
+  --chrome:  #efe7d6;
+  --ink:     #1c1a14;
+  --muted:   #6e6757;
+  --line:    rgba(28,26,20,0.12);
+  --accent:  #5d6b40;
+  --on:      #f4ede0;
+  --sage:    #5d6b40;
+  --terra:   #b65a30;
+  --butter:  #e8b85a;
+  --rose:    #c97e6e;
+  --serif:   'Instrument Serif', ui-serif, Georgia, serif;
+  --sans:    'Geist', ui-sans-serif, system-ui, sans-serif;
+  --mono:    'JetBrains Mono', monospace;
+
+  /* layout */
+  --gutter:      64px;
+  --sec-py:      100px;
+  --sec-py-sm:   56px;
+  --head-mb:     56px;
+  --h1:          88px;
+  --h2:          56px;
+  --h3:          32px;
+  --h4:          22px;
+  --lead:        18px;
+  --body:        15px;
+  --cta-mt:      36px;
+  --hero-gap:    48px;
+  --mock-mt:     96px;
+  --mock-max:    960px;
+  --mock-h:      480px;
+  --feat-gap:    96px;
+  --feat-cols:   1.05fr 1fr;
+  --feat-cgap:   60px;
+  --feat-mh:     360px;
+  --feat-pad:    48px;
+  --cmp-cols:    1fr 1fr;
+  --cmp-pad:     32px;
+  --h1-mt:       24px;
+  --h1-mb:       28px;
+}
+
+/* ── Reset & base ──────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+button, input { font-family: inherit; }
+
+/* ── Animations ────────────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.18); opacity: 0.65; }
+}
+@keyframes orbit {
+  0%, 100% { transform: rotateY(-3.5deg) rotateX(2deg); }
+  50%       { transform: rotateY(3.5deg) rotateX(-1.5deg); }
+}
+@keyframes float-a {
+  0%, 100% { transform: translate3d(0,0,70px) rotate(-6deg); }
+  50%       { transform: translate3d(0,-14px,70px) rotate(-4.6deg); }
+}
+@keyframes float-b {
+  0%, 100% { transform: translate3d(0,0,90px) rotate(5deg); }
+  50%       { transform: translate3d(0,-18px,90px) rotate(3.4deg); }
+}
+@keyframes float-c {
+  0%, 100% { transform: translate3d(0,0,110px) rotate(-3deg); }
+  50%       { transform: translate3d(0,-10px,110px) rotate(-1.8deg); }
+}
+@keyframes float-d {
+  0%, 100% { transform: translate3d(0,0,80px) rotate(4deg); }
+  50%       { transform: translate3d(0,-16px,80px) rotate(2.7deg); }
+}
+@keyframes bubble-in {
+  0%   { opacity: 0; transform: translateY(10px) scale(0.96); }
+  60%  { opacity: 1; transform: translateY(0) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes typing-dot {
+  0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
+  30%            { opacity: 1;    transform: translateY(-3px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .orbit, .chip { animation: none !important; }
+}
+
+/* ── Helpers ───────────────────────────────────────────────────────────── */
+.serif   { font-family: var(--serif); }
+.mono    { font-family: var(--mono); }
+.muted   { color: var(--muted); }
+.kicker  {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.section-head { text-align: center; max-width: 640px; margin: 0 auto var(--head-mb); }
+h2.serif-h2 {
+  font-family: var(--serif);
+  font-size: var(--h2);
+  margin: 12px 0 0;
+  color: var(--ink);
+  letter-spacing: -.02em;
+  font-weight: 400;
+  line-height: 1.05;
+}
+.section-sub {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: var(--muted);
+  margin: 14px auto 0;
+  max-width: 480px;
+  line-height: 1.55;
+}
+
+/* ── Nav ───────────────────────────────────────────────────────────────── */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.wordmark {
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.wordmark .bracket { color: var(--accent); font-weight: 300; }
+.wordmark .e-italic { color: var(--accent); font-style: italic; }
+.wordmark .dot {
+  display: inline-block;
+  width: 3px; height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  margin: 0 3px;
+  position: relative;
+  top: -2px;
+}
+.nav-badge {
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklch, var(--terra) 40%, var(--line));
+  background: color-mix(in oklch, var(--terra) 12%, var(--paper));
+  color: var(--terra);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-cta {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on);
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ── Chat bubbles ──────────────────────────────────────────────────────── */
+.chat-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 460px;
+  margin: 0 auto var(--hero-gap);
+  min-height: 220px;
+}
+.bubble {
+  max-width: 82%;
+  padding: 11px 16px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0;
+}
+.bubble.them {
+  align-self: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px 14px 14px 4px;
+}
+.bubble.me {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--on);
+  border-radius: 14px 14px 4px 14px;
+}
+.bubble.visible { animation: bubble-in .4s ease-out forwards; }
+.typing-dots {
+  align-self: flex-start;
+  display: none;
+  gap: 5px;
+  padding: 12px 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px 14px 14px 4px;
+}
+.typing-dots.active { display: inline-flex; }
+.typing-dots span {
+  width: 6px; height: 6px;
+  border-radius: 999px;
+  background: var(--muted);
+  opacity: 0.4;
+  animation: typing-dot 1.1s ease-in-out infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: .18s; }
+.typing-dots span:nth-child(3) { animation-delay: .36s; }
+
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+.hero {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.hero-text {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--terra) 14%, var(--paper));
+  border: 1px solid color-mix(in oklch, var(--terra) 32%, var(--line));
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  color: var(--terra);
+}
+.hero-badge .dot {
+  width: 7px; height: 7px;
+  border-radius: 999px;
+  background: var(--terra);
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--terra) 25%, transparent);
+  animation: pulse 2s ease-in-out infinite;
+}
+h1.hero-h1 {
+  font-family: var(--serif);
+  font-size: var(--h1);
+  margin: var(--h1-mt) 0 var(--h1-mb);
+  color: var(--ink);
+  line-height: 1.02;
+  letter-spacing: -.02em;
+  font-weight: 400;
+}
+h1.hero-h1 em { font-style: italic; color: var(--accent); }
+.hero-sub {
+  font-family: var(--sans);
+  font-size: var(--lead);
+  color: var(--muted);
+  margin: 0 auto var(--cta-mt);
+  max-width: 540px;
+  line-height: 1.55;
+}
+.hero-micro {
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* ── Waitlist form ─────────────────────────────────────────────────────── */
+.wl-form {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wl-form.dark {
+  background: rgba(244,237,224,.08);
+  border-color: rgba(244,237,224,.18);
+}
+.wl-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--ink);
+}
+.wl-form.dark input[type="email"] { color: var(--paper); }
+.wl-form input::placeholder { color: color-mix(in oklch, currentColor 55%, transparent); }
+.wl-form button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on);
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.wl-form.dark button { background: var(--butter); color: var(--ink); }
+.wl-success {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 6px 4px 18px;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--sage) 12%, var(--paper));
+  border: 1px solid color-mix(in oklch, var(--sage) 30%, var(--line));
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+}
+.wl-success.dark {
+  background: rgba(244,237,224,.06);
+  border-color: rgba(244,237,224,.16);
+}
+.wl-success .check {
+  width: 26px; height: 26px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+.wl-success.dark .check { background: var(--butter); color: var(--ink); }
+.wl-success span { font-size: 14px; padding: 8px 0; }
+.wl-success.dark span { color: var(--paper); }
+
+/* ── Hero mock ─────────────────────────────────────────────────────────── */
+.hero-mock-wrap {
+  margin: var(--mock-mt) auto 0;
+  max-width: var(--mock-max);
+  position: relative;
+  perspective: 1800px;
+}
+.mock-label {
+  position: absolute;
+  top: -14px; left: 0; right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.mock-label span {
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+.orbit {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: orbit 14s ease-in-out infinite;
+  z-index: 1;
+}
+.chip {
+  position: absolute;
+  width: 132px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 18px 36px -16px rgba(28,26,20,.32), 0 4px 8px -4px rgba(28,26,20,.18);
+  pointer-events: none;
+  z-index: 2;
+}
+.chip-img {
+  height: 52px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.chip-img .chip-tag {
+  position: absolute; top: 6px; left: 6px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .06em;
+}
+.chip-name { font-size: 11px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 2px; }
+.chip-status { font-family: var(--mono); font-size: 9px; font-weight: 600; }
+
+/* ── Faux browser ──────────────────────────────────────────────────────── */
+.browser {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--card);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -28px rgba(28,26,20,.35);
+  display: flex;
+  flex-direction: column;
+}
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--chrome);
+  flex-shrink: 0;
+}
+.browser-dots { display: flex; gap: 6px; }
+.browser-dots span { width: 10px; height: 10px; border-radius: 999px; }
+.browser-dots .red    { background: #e0a0a0; }
+.browser-dots .yellow { background: #e0c98a; }
+.browser-dots .green  { background: #a8c594; }
+.browser-url {
+  flex: 1;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+}
+.browser-body { flex: 1; overflow: hidden; position: relative; }
+
+/* ── Storefront mock ───────────────────────────────────────────────────── */
+.mock-store {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  overflow: hidden;
+}
+.mock-store-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--paper);
+  flex-shrink: 0;
+}
+.mock-store-logo { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; }
+.mock-store-cart { font-family: var(--mono); font-size: 10px; color: var(--butter); }
+.mock-store-hero {
+  padding: 16px 14px 10px;
+  border-bottom: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.mock-store-tag { font-family: var(--mono); font-size: 8px; letter-spacing: .1em; color: var(--muted); text-transform: uppercase; margin-bottom: 4px; }
+.mock-store-title { font-family: var(--serif); font-size: 20px; color: var(--ink); line-height: 1.1; }
+.mock-store-cta {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .06em;
+}
+.mock-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 10px 14px;
+  overflow: hidden;
+}
+.mock-product {
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+.mock-product-img { height: 52px; position: relative; }
+.mock-product-info { padding: 5px 7px; }
+.mock-product-name { font-size: 9px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 2px; }
+.mock-product-price { font-family: var(--mono); font-size: 8px; color: var(--muted); }
+.mock-product-badge {
+  position: absolute;
+  top: 5px; left: 5px;
+  padding: 2px 5px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 7px;
+  letter-spacing: .04em;
+}
+
+/* ── Feature mocks (orders / stock) ───────────────────────────────────── */
+.mock-orders {
+  height: 100%;
+  background: var(--paper);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.mock-orders-head {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.mock-orders-title { font-family: var(--serif); font-size: 14px; }
+.mock-orders-btn {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--sage);
+  color: var(--on);
+  font-family: var(--mono);
+  font-size: 8px;
+}
+.mock-order-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  padding: 9px 14px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.mock-order-name { font-size: 11px; color: var(--ink); }
+.mock-order-item { font-size: 10px; color: var(--muted); margin-top: 1px; }
+.mock-order-badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 600;
+}
+.badge-new  { background: color-mix(in oklch, var(--rose)   18%, var(--paper)); color: var(--rose); }
+.badge-proc { background: color-mix(in oklch, var(--butter) 18%, var(--paper)); color: var(--terra); }
+.badge-done { background: color-mix(in oklch, var(--sage)   18%, var(--paper)); color: var(--sage); }
+
+.mock-stock { height: 100%; background: var(--paper); overflow: hidden; display: flex; flex-direction: column; }
+.mock-stock-head {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.mock-stock-title { font-family: var(--serif); font-size: 14px; }
+.mock-stock-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 12px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.mock-stock-name { font-size: 11px; color: var(--ink); }
+.mock-stock-num { font-family: var(--mono); font-size: 11px; font-weight: 500; }
+.mock-stock-bar-wrap { width: 48px; height: 5px; background: var(--line); border-radius: 999px; overflow: hidden; }
+.mock-stock-bar { height: 100%; border-radius: 999px; }
+
+/* ── Problem section ───────────────────────────────────────────────────── */
+.problem-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in oklch, var(--rose) 6%, var(--paper));
+}
+.problem-quote {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--head-mb);
+}
+.problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+.pain-card {
+  padding: 28px;
+  border-radius: 18px;
+  background: var(--card);
+  position: relative;
+  overflow: hidden;
+}
+.pain-number {
+  position: absolute;
+  top: -10px; right: 2px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 92px;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+.pain-tag {
+  width: 34px; height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+.pain-card h3 {
+  font-family: var(--serif);
+  font-size: var(--h4);
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -.01em;
+  position: relative;
+  z-index: 1;
+}
+.pain-card p {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Features section ──────────────────────────────────────────────────── */
+.features-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+.feature-list { display: grid; gap: var(--feat-gap); }
+.feature-card { padding: var(--feat-pad); border-radius: 18px; }
+.feature-quote { display: flex; margin-bottom: 18px; }
+.feature-quote.right { justify-content: flex-end; }
+.feature-row {
+  display: grid;
+  grid-template-columns: var(--feat-cols);
+  gap: var(--feat-cgap);
+  align-items: center;
+}
+.feature-mock { order: 1; }
+.feature-copy { order: 2; }
+.feature-row.flip .feature-mock { order: 2; }
+.feature-row.flip .feature-copy { order: 1; }
+.feature-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  margin-bottom: 12px;
+}
+.feature-tag-pill .dot { width: 6px; height: 6px; border-radius: 999px; }
+.feature-card h3 {
+  font-family: var(--serif);
+  font-size: var(--h3);
+  margin: 0 0 14px;
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  font-weight: 400;
+}
+.feature-card .desc {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: var(--muted);
+  margin: 0 0 18px;
+  line-height: 1.55;
+  max-width: 380px;
+}
+.feature-bullets { display: flex; flex-direction: column; gap: 10px; max-width: 380px; }
+.feature-bullet { display: flex; gap: 10px; align-items: flex-start; }
+.check-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 18px; height: 18px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+}
+.feature-bullet span { font-family: var(--sans); font-size: var(--body); color: var(--ink); line-height: 1.45; }
+
+/* ── Comparison table ──────────────────────────────────────────────────── */
+.compare-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+.compare-wrap {
+  max-width: 920px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: 0 24px 60px -34px rgba(28,26,20,.3);
+}
+.compare-scroll { overflow-x: auto; }
+.compare-table {
+  min-width: 640px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr 1fr 1.2fr;
+  width: 100%;
+}
+.compare-head { padding: 16px; background: var(--paper); }
+.compare-head.etal {
+  background: var(--accent);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+  color: var(--on);
+  text-align: center;
+  line-height: 1.15;
+}
+.compare-head.label {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.3;
+}
+.compare-cell {
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.compare-cell.row-label {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--muted);
+  justify-content: flex-start;
+  padding-left: 18px;
+}
+.compare-cell.etal-cell {
+  background: color-mix(in oklch, var(--sage) 11%, var(--paper));
+  border-top-color: color-mix(in oklch, var(--sage) 22%, var(--line));
+  font-weight: 500;
+  color: var(--ink);
+  gap: 7px;
+}
+.compare-cell.etal-cell .tick { color: var(--accent); font-weight: 700; flex-shrink: 0; }
+
+/* ── Founder section ───────────────────────────────────────────────────── */
+.founder-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in oklch, var(--sage) 8%, var(--paper));
+}
+.founder-inner { max-width: 720px; margin: 0 auto; }
+.founder-chat { display: flex; gap: 18px; align-items: flex-start; }
+.founder-ava {
+  width: 56px; height: 56px;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--accent) 30%, var(--paper));
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+  font-size: 24px;
+  color: var(--accent);
+}
+.founder-bubbles { display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.founder-signoff {
+  margin-top: 10px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+  color: var(--muted);
+}
+
+/* ── Perks section ─────────────────────────────────────────────────────── */
+.perks-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+}
+.perks-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+.perk-card {
+  padding: 28px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.perk-bg-letter {
+  position: absolute;
+  top: -8px; right: -8px;
+  font-family: var(--serif);
+  font-size: 88px;
+  font-style: italic;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+.perk-tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  margin-bottom: 14px;
+  position: relative;
+  z-index: 1;
+}
+.perk-tag-pill .dot { width: 6px; height: 6px; border-radius: 999px; }
+.perk-card h3 {
+  font-family: var(--serif);
+  font-size: var(--h3);
+  margin: 0 0 10px;
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+.perk-card p {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.55;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Roadmap ───────────────────────────────────────────────────────────── */
+.roadmap-section {
+  padding: var(--sec-py) var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: var(--card);
+}
+.roadmap-list {
+  max-width: 820px;
+  margin: 0 auto;
+  position: relative;
+}
+.roadmap-rail {
+  position: absolute;
+  left: 22px; top: 12px; bottom: 12px;
+  width: 1px;
+  background: var(--line);
+}
+.roadmap-item {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  position: relative;
+}
+.roadmap-dot-col { display: flex; align-items: flex-start; justify-content: center; padding-top: 6px; position: relative; }
+.roadmap-dot {
+  width: 12px; height: 12px;
+  border-radius: 999px;
+  border: 2px solid var(--card);
+  position: relative;
+  z-index: 1;
+}
+.roadmap-dot.now {
+  width: 16px; height: 16px;
+  animation: pulse 2s ease-in-out infinite;
+}
+.roadmap-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 20px;
+}
+.roadmap-card.now {
+  background: color-mix(in oklch, var(--terra) 8%, var(--paper));
+  border-color: color-mix(in oklch, var(--terra) 28%, var(--line));
+}
+.roadmap-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.roadmap-card h4 {
+  font-family: var(--serif);
+  font-size: var(--h4);
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-weight: 400;
+  letter-spacing: -.01em;
+}
+.roadmap-card p { font-family: var(--sans); font-size: var(--body); color: var(--muted); margin: 0; line-height: 1.55; }
+
+/* ── Footer ────────────────────────────────────────────────────────────── */
+.site-footer {
+  padding: var(--sec-py) var(--gutter);
+  background: var(--ink);
+  color: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+.footer-blob-1 {
+  position: absolute; top: -60px; right: -40px;
+  width: 220px; height: 220px;
+  border-radius: 999px;
+  background: var(--terra); opacity: .55;
+  filter: blur(2px);
+  pointer-events: none;
+}
+.footer-blob-2 {
+  position: absolute; bottom: -80px; right: 180px;
+  width: 160px; height: 160px;
+  border-radius: 999px;
+  background: var(--butter); opacity: .45;
+  pointer-events: none;
+}
+.footer-blob-3 {
+  position: absolute; bottom: -30px; left: -30px;
+  width: 120px; height: 120px;
+  border-radius: 999px;
+  background: var(--sage); opacity: .35;
+  pointer-events: none;
+}
+.footer-content {
+  position: relative; z-index: 1;
+  max-width: 720px; margin: 0 auto;
+  text-align: center;
+}
+.footer-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .16em;
+  color: var(--butter);
+  text-transform: uppercase;
+}
+.footer-h2 {
+  font-family: var(--serif);
+  font-size: var(--h2);
+  margin: 12px 0 18px;
+  color: var(--paper);
+  letter-spacing: -.02em;
+  font-weight: 400;
+  line-height: 1.05;
+}
+.footer-h2 em { font-style: italic; color: var(--butter); }
+.footer-sub {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: rgba(244,237,224,.75);
+  margin: 0 auto 28px;
+  max-width: 460px;
+  line-height: 1.55;
+}
+.footer-bottom {
+  position: relative; z-index: 1;
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(244,237,224,.14);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+.footer-copy {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: rgba(244,237,224,.6);
+  letter-spacing: .1em;
+}
+.footer-wordmark .bracket { color: var(--butter); }
+.footer-wordmark .e-italic { color: var(--butter); }
+.footer-wordmark .dot { background: var(--butter); }
+.footer-wordmark { color: var(--paper); }
+
+/* ── Generic bubble ────────────────────────────────────────────────────── */
+.chat-bubble {
+  max-width: 82%;
+  padding: 11px 16px;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.chat-bubble.them {
+  align-self: flex-start;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px 14px 14px 4px;
+}
+.chat-bubble.me {
+  align-self: flex-end;
+  background: var(--accent);
+  color: var(--on);
+  border-radius: 14px 14px 4px 14px;
+}
+.merchant-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  color: color-mix(in oklch, var(--on) 70%, transparent);
+  margin-bottom: 4px;
+}
+
+/* ── Responsive ────────────────────────────────────────────────────────── */
+@media (max-width: 1099px) {
+  :root {
+    --gutter: 40px; --sec-py: 72px; --sec-py-sm: 40px;
+    --head-mb: 40px; --h1: 64px; --h2: 44px; --h3: 28px;
+    --mock-mt: 72px; --mock-max: 100%; --mock-h: 420px;
+    --feat-gap: 72px; --feat-cols: 1fr 1fr; --feat-cgap: 36px;
+    --feat-mh: 320px; --feat-pad: 32px;
+  }
+}
+@media (max-width: 720px) {
+  :root {
+    --gutter: 20px; --sec-py: 56px; --sec-py-sm: 28px;
+    --head-mb: 28px; --h1: 40px; --h2: 30px; --h3: 24px; --h4: 20px;
+    --lead: 15px; --body: 14px; --h1-mt: 16px; --h1-mb: 18px;
+    --cta-mt: 24px; --mock-mt: 48px; --mock-h: 300px;
+    --feat-gap: 48px; --feat-cols: 1fr; --feat-cgap: 20px;
+    --feat-mh: 260px; --feat-pad: 20px;
+  }
+  .nav-links .nav-text { display: none; }
+  .nav-badge { display: none; }
+  .chip { display: none !important; }
+  .problem-grid { grid-template-columns: 1fr !important; }
+  .perks-grid  { grid-template-columns: 1fr !important; }
+  .wl-form { flex-direction: column !important; gap: 8px !important; padding: 8px !important; border-radius: 16px !important; }
+  .wl-form button, .wl-form input { width: 100%; }
+  .feature-row, .feature-row.flip { grid-template-columns: 1fr !important; }
+  .feature-mock, .feature-row.flip .feature-mock { order: 1 !important; }
+  .feature-copy, .feature-row.flip .feature-copy { order: 2 !important; }
+  .feature-quote.right { justify-content: flex-start !important; }
+  .founder-ava { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════════════════════════ -->
+<nav class="site-nav" aria-label="Navigasi utama">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="/" class="wordmark" aria-label="e-talase beranda">
+      <span class="bracket">[</span><span class="e-italic">e</span><span class="bracket">]</span><span class="dot"></span>talase
+    </a>
+    <span class="nav-badge">● Soft launch</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#masalah" class="nav-text">Masalah</a></li>
+    <li><a href="#fitur"   class="nav-text">Fitur</a></li>
+    <li><a href="#bandingkan" class="nav-text">Bandingkan</a></li>
+    <li><a href="#roadmap"    class="nav-text">Roadmap</a></li>
+    <li><a href="https://app.e-talase.com" class="nav-cta">Daftar sekarang</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<!-- ═══ HERO ══════════════════════════════════════════════════════════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+
+  <!-- Animated chat -->
+  <div class="chat-wrap" id="hero-chat" aria-hidden="true">
+    <div class="typing-dots" id="typing"><span></span><span></span><span></span></div>
+    <div class="bubble them" data-delay="0">Jualan di marketplace, ramai ya?</div>
+    <div class="bubble me"   data-delay="1">Ramai, tapi keuntungannya kepotong biaya terus.</div>
+    <div class="bubble them" data-delay="2">Pengin punya toko sendiri, tapi mikirin server dan domain?</div>
+    <div class="bubble me"   data-delay="3">Iya. Saya bukan orang teknis.</div>
+    <div class="bubble them" data-delay="4">Itu alasan kami bikin e-talase. Kamu yang jualan, teknisnya kami yang urus.</div>
+  </div>
+
+  <div class="hero-text">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      TOKO SENDIRI · SOFT LAUNCH 2026
+    </div>
+
+    <h1 class="hero-h1" id="hero-heading">
+      Toko kamu,<br>
+      <em>aturan kamu.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Punya toko online sendiri — bukan cuma lapak di marketplace. Server, domain, dan urusan teknisnya kami yang tangani. Kamu tinggal fokus jualan, dan bisa mulai hari ini juga.
+    </p>
+
+    <!-- Waitlist form (hero) -->
+    <div class="wl-form-wrap" id="wl-hero-wrap">
+      <form class="wl-form" id="wl-hero" novalidate>
+        <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
+        <button type="submit">Daftar sekarang →</button>
+      </form>
+      <div class="wl-success" id="wl-hero-ok" role="status">
+        <span class="check">✓</span>
+        <span>Makasih — kami kabari begitu akun kamu siap.</span>
+      </div>
+    </div>
+
+    <p class="hero-micro">gratis bulan pertama · tanpa kartu kredit · cukup email kamu</p>
+  </div>
+
+  <!-- Hero product mockup -->
+  <div class="hero-mock-wrap">
+    <div class="mock-label"><span>PRATINJAU · Toko yang sudah jalan</span></div>
+
+    <!-- Floating chips -->
+    <div class="chip" style="top:-40px;left:-60px;animation:float-a 7s ease-in-out infinite;">
+      <div class="chip-img" style="background:color-mix(in oklch,var(--rose) 36%,var(--paper));">
+        <span class="chip-tag">BARU</span>
+      </div>
+      <div class="chip-name">Hijab voal · Mocca</div>
+      <div class="chip-status" style="color:var(--rose);">● BARU</div>
+    </div>
+    <div class="chip" style="top:-30px;right:-70px;animation:float-b 7s ease-in-out infinite;">
+      <div class="chip-img" style="background:color-mix(in oklch,var(--sage) 36%,var(--paper));">
+        <span class="chip-tag">LARIS</span>
+      </div>
+      <div class="chip-name">Outer linen · Sage</div>
+      <div class="chip-status" style="color:var(--sage);">● LARIS</div>
+    </div>
+    <div class="chip" style="bottom:-50px;left:40px;animation:float-c 7s ease-in-out infinite;">
+      <div class="chip-img" style="background:color-mix(in oklch,var(--butter) 36%,var(--paper));">
+        <span class="chip-tag">PROMO</span>
+      </div>
+      <div class="chip-name">Bros mini · Pearl</div>
+      <div class="chip-status" style="color:var(--terra);">● PROMO</div>
+    </div>
+    <div class="chip" style="bottom:-40px;right:60px;animation:float-d 7s ease-in-out infinite;">
+      <div class="chip-img" style="background:color-mix(in oklch,var(--terra) 36%,var(--paper));">
+        <span class="chip-tag">STOK 3</span>
+      </div>
+      <div class="chip-name">Tas anyam · Beige</div>
+      <div class="chip-status" style="color:var(--terra);">● STOK 3</div>
+    </div>
+
+    <div class="orbit">
+      <div class="browser" style="height:var(--mock-h);">
+        <div class="browser-bar">
+          <div class="browser-dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+          <div class="browser-url">tokokamu.e-talase.com</div>
+        </div>
+        <div class="browser-body">
+          <div class="mock-store">
+            <div class="mock-store-nav">
+              <span class="mock-store-logo">TOKO RINA</span>
+              <span class="mock-store-cart">🛒 2</span>
+            </div>
+            <div class="mock-store-hero">
+              <div class="mock-store-tag">Koleksi Terbaru</div>
+              <div class="mock-store-title">Fashion wanita<br>untuk kamu.</div>
+              <span class="mock-store-cta">Lihat semua →</span>
+            </div>
+            <div class="mock-product-grid">
+              <div class="mock-product">
+                <div class="mock-product-img" style="background:color-mix(in oklch,var(--rose) 28%,var(--paper));"><span class="mock-product-badge">BARU</span></div>
+                <div class="mock-product-info"><div class="mock-product-name">Hijab voal</div><div class="mock-product-price">Rp 78.000</div></div>
+              </div>
+              <div class="mock-product">
+                <div class="mock-product-img" style="background:color-mix(in oklch,var(--sage) 28%,var(--paper));"><span class="mock-product-badge">LARIS</span></div>
+                <div class="mock-product-info"><div class="mock-product-name">Outer linen</div><div class="mock-product-price">Rp 145.000</div></div>
+              </div>
+              <div class="mock-product">
+                <div class="mock-product-img" style="background:color-mix(in oklch,var(--butter) 28%,var(--paper));"><span class="mock-product-badge">PROMO</span></div>
+                <div class="mock-product-info"><div class="mock-product-name">Bros mini</div><div class="mock-product-price">Rp 35.000</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROBLEM ════════════════════════════════════════════════════════════ -->
+<section class="problem-section" id="masalah" aria-labelledby="problem-heading">
+  <div class="section-head" style="max-width:640px;">
+    <p class="kicker">Kenapa toko sendiri · 01</p>
+    <h2 class="serif-h2" id="problem-heading">
+      Omzet naik, tapi <em style="font-style:italic;color:var(--terra);">laba belum ikut naik.</em>
+    </h2>
+    <p class="section-sub">
+      Ini bukan salah kamu. Marketplace memang jago mengumpulkan keramaian — tapi ada titik di mana bisnis butuh kanal yang benar-benar kamu miliki sendiri.
+    </p>
+  </div>
+
+  <div class="problem-quote">
+    <div class="chat-bubble me" style="max-width:380px;">
+      <div class="merchant-label">MERCHANT · KELUHAN</div>
+      Tiap bulan penjualan makin ramai, tapi yang masuk ke kantong belum banyak berubah.
+    </div>
+  </div>
+
+  <div class="problem-grid">
+    <article class="pain-card" style="border:1px solid color-mix(in oklch,var(--rose) 24%,var(--line));">
+      <div class="pain-number" style="color:color-mix(in oklch,var(--rose) 16%,transparent);">1</div>
+      <div class="pain-tag" style="background:color-mix(in oklch,var(--rose) 18%,var(--paper));color:var(--rose);">1</div>
+      <h3>Margin terpotong</h3>
+      <p>Biaya admin naik terus. Belum lagi harus ikut flash sale dan subsidi promo biar produk tetap kelihatan.</p>
+    </article>
+    <article class="pain-card" style="border:1px solid color-mix(in oklch,var(--terra) 24%,var(--line));">
+      <div class="pain-number" style="color:color-mix(in oklch,var(--terra) 16%,transparent);">2</div>
+      <div class="pain-tag" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);">2</div>
+      <h3>Perang harga</h3>
+      <p>Calon pembeli bisa membandingkan harga dengan toko sebelah cuma dengan sekali klik.</p>
+    </article>
+    <article class="pain-card" style="border:1px solid color-mix(in oklch,var(--butter) 24%,var(--line));">
+      <div class="pain-number" style="color:color-mix(in oklch,var(--butter) 16%,transparent);">3</div>
+      <div class="pain-tag" style="background:color-mix(in oklch,var(--butter) 18%,var(--paper));color:var(--terra);">3</div>
+      <h3>Data bukan milikmu</h3>
+      <p>Pelanggan datang dan pergi. Mau follow-up untuk repeat order? Susah — sering dibatasi platform.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ FEATURES ═══════════════════════════════════════════════════════════ -->
+<section class="features-section" id="fitur" aria-labelledby="features-heading">
+  <div class="section-head">
+    <p class="kicker">Yang kamu dapatkan · 02</p>
+    <h2 class="serif-h2" id="features-heading">
+      Kamu yang jualan. <em style="font-style:italic;color:var(--accent);">Teknisnya kami.</em>
+    </h2>
+    <p class="section-sub">
+      Bukan sekadar situs web — sistem operasional lengkap, dari toko sampai stok. Yang kamu lihat di bawah adalah versi yang sedang kami kembangkan.
+    </p>
+  </div>
+
+  <div class="feature-list">
+
+    <!-- Feature 01 — Storefront -->
+    <article class="feature-card" style="background:color-mix(in oklch,var(--sage) 6%,var(--paper));border:1px solid color-mix(in oklch,var(--sage) 22%,var(--line));">
+      <div class="feature-quote">
+        <div class="chat-bubble them">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted);margin-bottom:4px;">MERCHANT · KELUHAN</div>
+          Pengin punya toko sendiri, tapi urusan server dan maintenance bikin ragu sejak awal.
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-mock browser" style="height:var(--feat-mh);">
+          <div class="browser-bar">
+            <div class="browser-dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+            <div class="browser-url">app.e-talase.com/storefront</div>
+          </div>
+          <div class="browser-body">
+            <div class="mock-store">
+              <div class="mock-store-nav"><span class="mock-store-logo">TOKO RINA</span><span class="mock-store-cart">● Online</span></div>
+              <div class="mock-store-hero">
+                <div class="mock-store-tag">Template "Garden" aktif</div>
+                <div class="mock-store-title" style="font-size:16px;">Toko kamu,<br>siap hari ini.</div>
+                <span class="mock-store-cta">Lihat pratinjau →</span>
+              </div>
+              <div class="mock-product-grid">
+                <div class="mock-product"><div class="mock-product-img" style="background:color-mix(in oklch,var(--rose) 28%,var(--paper));"></div><div class="mock-product-info"><div class="mock-product-name">Produk 1</div><div class="mock-product-price">Rp 78.000</div></div></div>
+                <div class="mock-product"><div class="mock-product-img" style="background:color-mix(in oklch,var(--sage) 28%,var(--paper));"></div><div class="mock-product-info"><div class="mock-product-name">Produk 2</div><div class="mock-product-price">Rp 145.000</div></div></div>
+                <div class="mock-product"><div class="mock-product-img" style="background:color-mix(in oklch,var(--butter) 28%,var(--paper));"></div><div class="mock-product-info"><div class="mock-product-name">Produk 3</div><div class="mock-product-price">Rp 35.000</div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-copy">
+          <div class="feature-tag-pill" style="background:color-mix(in oklch,var(--sage) 18%,var(--paper));color:var(--sage);">
+            <span class="dot" style="background:var(--sage);"></span>#01 · SOLUSI
+          </div>
+          <h3>Toko siap pakai, tanpa kamu menyentuh urusan teknis.</h3>
+          <p class="desc">Server, domain, sertifikat, sampai update — semua kami yang tangani. Kamu cukup siapkan nama toko dan foto produk.</p>
+          <ul class="feature-bullets">
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--sage) 20%,var(--paper));color:var(--sage);">✓</span>
+              <span>Toko online aktif hari ini juga, bukan tiga bulan lagi</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--sage) 20%,var(--paper));color:var(--sage);">✓</span>
+              <span>Tanpa perlu mikirin server, domain, atau maintenance</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--sage) 20%,var(--paper));color:var(--sage);">✓</span>
+              <span>Terima transfer bank langsung — tanpa biaya transaksi tambahan, pas untuk produk bernilai tinggi</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Feature 02 — Orders -->
+    <article class="feature-card" style="background:color-mix(in oklch,var(--terra) 6%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 22%,var(--line));">
+      <div class="feature-quote right">
+        <div class="chat-bubble them">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted);margin-bottom:4px;">MERCHANT · KELUHAN</div>
+          Pesanan masih dicatat manual dari berbagai chat, dan sering ada yang kelewat.
+        </div>
+      </div>
+      <div class="feature-row flip">
+        <div class="feature-mock browser" style="height:var(--feat-mh);">
+          <div class="browser-bar">
+            <div class="browser-dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+            <div class="browser-url">app.e-talase.com/orders</div>
+          </div>
+          <div class="browser-body">
+            <div class="mock-orders">
+              <div class="mock-orders-head">
+                <span class="mock-orders-title">Pesanan masuk</span>
+                <span class="mock-orders-btn">+ Order link baru</span>
+              </div>
+              <div class="mock-order-row"><div><div class="mock-order-name">Rina P.</div><div class="mock-order-item">Hijab voal · Mocca — Rp 78.000</div></div><span class="mock-order-badge badge-new">BARU</span></div>
+              <div class="mock-order-row"><div><div class="mock-order-name">Dewi K.</div><div class="mock-order-item">Outer linen · Sage — Rp 145.000</div></div><span class="mock-order-badge badge-proc">PROSES</span></div>
+              <div class="mock-order-row"><div><div class="mock-order-name">Sari M.</div><div class="mock-order-item">Tas anyam · Beige — Rp 320.000</div></div><span class="mock-order-badge badge-done">SELESAI</span></div>
+              <div class="mock-order-row"><div><div class="mock-order-name">Ayu R.</div><div class="mock-order-item">Bros mini · Pearl — Rp 35.000</div></div><span class="mock-order-badge badge-new">BARU</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-copy">
+          <div class="feature-tag-pill" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);">
+            <span class="dot" style="background:var(--terra);"></span>#02 · SOLUSI
+          </div>
+          <h3>Ubah obrolan jadi pesanan lewat order link.</h3>
+          <p class="desc">Dari obrolan di media sosial atau chat, buatkan keranjang belanja siap bayar — lengkap dengan item dan jumlah yang diminta pelanggan. Tinggal kirim link-nya.</p>
+          <ul class="feature-bullets">
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Order link berisi keranjang siap bayar sesuai item &amp; jumlah yang diminta pelanggan</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Pasang kode voucher untuk promo maupun pelanggan setia</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Status dan resi terupdate otomatis, tanpa pengecekan manual</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Feature 03 — Stock -->
+    <article class="feature-card" style="background:color-mix(in oklch,var(--butter) 6%,var(--paper));border:1px solid color-mix(in oklch,var(--butter) 22%,var(--line));">
+      <div class="feature-quote">
+        <div class="chat-bubble them">
+          <div style="font-family:var(--mono);font-size:9px;letter-spacing:.1em;color:var(--muted);margin-bottom:4px;">MERCHANT · KELUHAN</div>
+          Sering kejual barang yang ternyata stoknya sudah habis.
+        </div>
+      </div>
+      <div class="feature-row">
+        <div class="feature-mock browser" style="height:var(--feat-mh);">
+          <div class="browser-bar">
+            <div class="browser-dots"><span class="red"></span><span class="yellow"></span><span class="green"></span></div>
+            <div class="browser-url">app.e-talase.com/stock</div>
+          </div>
+          <div class="browser-body">
+            <div class="mock-stock">
+              <div class="mock-stock-head"><span class="mock-stock-title">Stok produk</span><span style="font-family:var(--mono);font-size:9px;color:var(--muted);">18 SKU aktif</span></div>
+              <div class="mock-stock-row"><span class="mock-stock-name">Hijab voal · Mocca</span><span class="mock-stock-num" style="color:var(--sage);">24</span><div class="mock-stock-bar-wrap"><div class="mock-stock-bar" style="width:80%;background:var(--sage);"></div></div></div>
+              <div class="mock-stock-row"><span class="mock-stock-name">Outer linen · Sage</span><span class="mock-stock-num" style="color:var(--butter);">5</span><div class="mock-stock-bar-wrap"><div class="mock-stock-bar" style="width:20%;background:var(--butter);"></div></div></div>
+              <div class="mock-stock-row"><span class="mock-stock-name">Bros mini · Pearl</span><span class="mock-stock-num" style="color:var(--sage);">42</span><div class="mock-stock-bar-wrap"><div class="mock-stock-bar" style="width:95%;background:var(--sage);"></div></div></div>
+              <div class="mock-stock-row"><span class="mock-stock-name">Tas anyam · Beige</span><span class="mock-stock-num" style="color:var(--rose);">2</span><div class="mock-stock-bar-wrap"><div class="mock-stock-bar" style="width:8%;background:var(--rose);"></div></div></div>
+              <div class="mock-stock-row"><span class="mock-stock-name">Syal katun · Cream</span><span class="mock-stock-num" style="color:var(--sage);">31</span><div class="mock-stock-bar-wrap"><div class="mock-stock-bar" style="width:65%;background:var(--sage);"></div></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="feature-copy">
+          <div class="feature-tag-pill" style="background:color-mix(in oklch,var(--butter) 18%,var(--paper));color:var(--terra);">
+            <span class="dot" style="background:var(--butter);"></span>#03 · SOLUSI
+          </div>
+          <h3>Stok terupdate otomatis. Nggak ada lagi over-sell.</h3>
+          <p class="desc">Stok berkurang otomatis setiap ada pesanan. Ada peringatan dini saat SKU menipis, jadi kamu bisa restock sebelum kehabisan.</p>
+          <ul class="feature-bullets">
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--butter) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Stok berkurang otomatis setiap pesanan masuk</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--butter) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Peringatan dini saat SKU mulai menipis</span>
+            </li>
+            <li class="feature-bullet">
+              <span class="check-icon" style="background:color-mix(in oklch,var(--butter) 20%,var(--paper));color:var(--terra);">✓</span>
+              <span>Anti over-sell — pelanggan nggak kecewa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══ COMPARISON ═════════════════════════════════════════════════════════ -->
+<section class="compare-section" id="bandingkan" aria-labelledby="compare-heading">
+  <div class="section-head" style="max-width:680px;">
+    <p class="kicker">Bandingkan · jujur · 03</p>
+    <h2 class="serif-h2" id="compare-heading">
+      Marketplace untuk mulai. <em style="font-style:italic;color:var(--accent);">Toko sendiri untuk bertahan.</em>
+    </h2>
+    <p class="section-sub">Tapi nggak semua harus dibangun dari nol. Bagian yang rumit itu tugas kami.</p>
+  </div>
+  <div class="compare-wrap">
+    <div class="compare-scroll">
+      <div class="compare-table" role="table" aria-label="Perbandingan marketplace, bangun sendiri, dan e-talase">
+        <!-- Header -->
+        <div class="compare-head" role="columnheader"></div>
+        <div class="compare-head label" role="columnheader">Lewat<br>marketplace</div>
+        <div class="compare-head label" role="columnheader">Bangun web<br>sendiri</div>
+        <div class="compare-head etal" role="columnheader">Pakai<br>e-talase</div>
+        <!-- Rows -->
+        <div class="compare-cell row-label" role="cell">Biaya bulanan</div>
+        <div class="compare-cell" role="cell">Biaya + iklan, terasa pelan-pelan</div>
+        <div class="compare-cell" role="cell">Jutaan untuk developer &amp; server</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hemat — gratis bulan pertama</span></div>
+
+        <div class="compare-cell row-label" role="cell">Margin laba</div>
+        <div class="compare-cell" role="cell">Terpotong biaya &amp; promo</div>
+        <div class="compare-cell" role="cell">Utuh</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Utuh, masuk ke kantong sendiri</span></div>
+
+        <div class="compare-cell row-label" role="cell">Data pelanggan</div>
+        <div class="compare-cell" role="cell">Terbatas, bukan milikmu</div>
+        <div class="compare-cell" role="cell">Milikmu</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>100% milikmu</span></div>
+
+        <div class="compare-cell row-label" role="cell">Waktu tayang</div>
+        <div class="compare-cell" role="cell">Instan</div>
+        <div class="compare-cell" role="cell">2 minggu – 3 bulan</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hari ini juga</span></div>
+
+        <div class="compare-cell row-label" role="cell">Butuh tim teknis</div>
+        <div class="compare-cell" role="cell">Nggak</div>
+        <div class="compare-cell" role="cell">Tinggi (developer + maintenance)</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak perlu</span></div>
+
+        <div class="compare-cell row-label" role="cell">Ketergantungan</div>
+        <div class="compare-cell" role="cell">Tinggi ke platform</div>
+        <div class="compare-cell" role="cell">Nggak ada</div>
+        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak ada</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOUNDER ════════════════════════════════════════════════════════════ -->
+<section class="founder-section" aria-labelledby="founder-heading">
+  <div class="founder-inner">
+    <div class="section-head" style="text-align:center;margin-bottom:var(--head-mb);">
+      <p class="kicker">Surat dari pendiri</p>
+      <h2 class="serif-h2" id="founder-heading">Kenapa kami <em style="font-style:italic;color:var(--accent);">bikin ini.</em></h2>
+    </div>
+    <div class="founder-chat">
+      <div class="founder-ava" aria-hidden="true">D</div>
+      <div class="founder-bubbles">
+        <div class="chat-bubble them">Halo, saya Dirga, pendiri e-talase.</div>
+        <div class="chat-bubble them">Awalnya saya bikin ini untuk bantu istri saya, yang lagi cari alternatif dari marketplace dengan biaya yang mahal.</div>
+        <div class="chat-bubble them">Dari situ, e-talase berkembang: ada fitur untuk kerja bareng tim — misalnya mengelola produk bersama — plus cara mudah memindahkan percakapan dari media sosial ke platform lewat order link.</div>
+        <div class="chat-bubble them">Tujuannya sederhana: bikin jualan online terasa lebih ringan, dan keuntungannya benar-benar jadi milik kamu.</div>
+        <p class="founder-signoff">— Dirga, pendiri e-talase</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PERKS ══════════════════════════════════════════════════════════════ -->
+<section class="perks-section" aria-labelledby="perks-heading">
+  <div class="section-head">
+    <p class="kicker">Untungnya gabung sekarang · 04</p>
+    <h2 class="serif-h2" id="perks-heading">Empat alasan <em style="font-style:italic;color:var(--accent);">gabung lebih awal.</em></h2>
+  </div>
+  <div class="perks-grid">
+    <article class="perk-card" style="background:color-mix(in oklch,var(--sage) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--sage) 24%,var(--line));">
+      <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--sage) 18%,transparent);">A</span>
+      <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--sage) 18%,var(--paper));color:var(--sage);"><span class="dot" style="background:var(--sage);"></span>PERK · A</div>
+      <h3>Gratis bulan pertama</h3>
+      <p>Promo soft launch: paket Starter gratis 100% di bulan pertama. Mulai jualan tanpa biaya.</p>
+    </article>
+    <article class="perk-card" style="background:color-mix(in oklch,var(--terra) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 24%,var(--line));">
+      <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--terra) 18%,transparent);">B</span>
+      <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);"><span class="dot" style="background:var(--terra);"></span>PERK · B</div>
+      <h3>Diskon 50% setahun penuh</h3>
+      <p>Setelah bulan pertama, nikmati potongan 50% untuk paket Starter selama satu tahun penuh.</p>
+    </article>
+    <article class="perk-card" style="background:color-mix(in oklch,var(--butter) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--butter) 24%,var(--line));">
+      <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--butter) 18%,transparent);">C</span>
+      <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--butter) 18%,var(--paper));color:var(--terra);"><span class="dot" style="background:var(--butter);"></span>PERK · C</div>
+      <h3>Dukungan langsung</h3>
+      <p>Kami siap bantu lewat call dan online meeting untuk proses setup dan dukungan sehari-hari.</p>
+    </article>
+    <article class="perk-card" style="background:color-mix(in oklch,var(--rose) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--rose) 24%,var(--line));">
+      <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--rose) 18%,transparent);">D</span>
+      <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--rose) 18%,var(--paper));color:var(--rose);"><span class="dot" style="background:var(--rose);"></span>PERK · D</div>
+      <h3>Suaramu, fitur kami</h3>
+      <p>Kamu yang menentukan fitur mana yang diprioritaskan. Kami kembangkan, kamu coba, kami sempurnakan.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ ROADMAP ════════════════════════════════════════════════════════════ -->
+<section class="roadmap-section" id="roadmap" aria-labelledby="roadmap-heading">
+  <div class="section-head">
+    <p class="kicker">Roadmap · transparan</p>
+    <h2 class="serif-h2" id="roadmap-heading">Apa <em style="font-style:italic;color:var(--accent);">yang akan datang</em>, kapan.</h2>
+    <p class="section-sub">Tanggal bisa bergeser, tapi urutannya sudah pasti.</p>
+  </div>
+  <div class="roadmap-list">
+    <div class="roadmap-rail" aria-hidden="true"></div>
+
+    <div class="roadmap-item">
+      <div class="roadmap-dot-col"><div class="roadmap-dot now" style="background:var(--terra);box-shadow:0 0 0 8px color-mix(in oklch,var(--terra) 25%,transparent);"></div></div>
+      <div class="roadmap-card now">
+        <div class="roadmap-label"><span style="color:var(--terra);">SEDANG BERJALAN · Jun 2026</span></div>
+        <h4>Soft launch</h4>
+        <p>Paket Starter sudah bisa dipakai — gratis di bulan pertama, lalu diskon 50% untuk satu tahun penuh. Daftar sekarang untuk ikut.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-item">
+      <div class="roadmap-dot-col"><div class="roadmap-dot" style="background:var(--sage);"></div></div>
+      <div class="roadmap-card">
+        <div class="roadmap-label"><span style="color:var(--sage);">BERIKUTNYA · Jul–Agu 2026</span></div>
+        <h4>Rilis aplikasi mobile</h4>
+        <p>Aplikasi mobile e-talase hadir, biar kamu bisa kelola toko langsung dari ponsel.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-item">
+      <div class="roadmap-dot-col"><div class="roadmap-dot" style="background:var(--butter);"></div></div>
+      <div class="roadmap-card">
+        <div class="roadmap-label"><span style="color:var(--terra);">NANTI · Okt 2026</span></div>
+        <h4>Open beta</h4>
+        <p>Kami buka pintu lebih lebar untuk lebih banyak merchant.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-item">
+      <div class="roadmap-dot-col"><div class="roadmap-dot" style="background:var(--muted);"></div></div>
+      <div class="roadmap-card">
+        <div class="roadmap-label"><span style="color:var(--muted);">MASIH JAUH · Jan 2027</span></div>
+        <h4>Public launch</h4>
+        <p>e-talase resmi terbuka untuk umum, lengkap dengan fitur-fitur terbaru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══ FOOTER ════════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-blob-1" aria-hidden="true"></div>
+  <div class="footer-blob-2" aria-hidden="true"></div>
+  <div class="footer-blob-3" aria-hidden="true"></div>
+
+  <div class="footer-content">
+    <p class="footer-kicker">Promo soft launch · Gratis bulan pertama</p>
+    <h2 class="footer-h2">Daftar sekarang, <em>mulai jualan.</em></h2>
+    <p class="footer-sub">Tinggalkan email kamu. Kami kabari begitu akun kamu siap — tanpa spam, tanpa jual data.</p>
+
+    <!-- Waitlist form (footer) -->
+    <form class="wl-form dark" id="wl-footer" novalidate>
+      <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
+      <button type="submit">Daftar sekarang →</button>
+    </form>
+    <div class="wl-success dark" id="wl-footer-ok" role="status">
+      <span class="check">✓</span>
+      <span>Makasih — kami kabari begitu akun kamu siap.</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <a href="/" class="wordmark footer-wordmark" aria-label="e-talase beranda">
+      <span class="bracket">[</span><span class="e-italic">e</span><span class="bracket">]</span><span class="dot"></span>talase
+    </a>
+    <p class="footer-copy">© 2026 · KARYA ANAK INDONESIA 🇮🇩</p>
+  </div>
+</footer>
+
+<script>
+/* ── Chat animation ──────────────────────────────────────────────────── */
+(function () {
+  var bubbles = document.querySelectorAll('#hero-chat .bubble');
+  var typing  = document.getElementById('typing');
+  var delays  = [0, 2200, 4400, 6600, 8800]; // ms between each bubble appearing
+  var resetAt = 18000; // loop restart
+
+  function showBubble(i) {
+    if (i >= bubbles.length) return;
+    var b = bubbles[i];
+    var isTyping = b.classList.contains('them');
+
+    if (isTyping) {
+      typing.classList.add('active');
+      setTimeout(function () {
+        typing.classList.remove('active');
+        b.classList.add('visible');
+      }, 1100);
+    } else {
+      b.classList.add('visible');
+    }
+  }
+
+  function runCycle() {
+    bubbles.forEach(function (b) { b.classList.remove('visible'); b.style.opacity = 0; });
+    delays.forEach(function (d, i) { setTimeout(function () { showBubble(i); }, d + 700); });
+    setTimeout(runCycle, resetAt);
+  }
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    bubbles.forEach(function (b) { b.classList.add('visible'); });
+  } else {
+    runCycle();
+  }
+})();
+
+/* ── Waitlist forms ───────────────────────────────────────────────────── */
+function setupForm(formId, successId) {
+  var form    = document.getElementById(formId);
+  var success = document.getElementById(successId);
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var email = form.querySelector('input[type="email"]').value.trim();
+    if (!email) return;
+
+    // Optional: POST to Formspree
+    // Replace YOUR_FORM_ID with your actual Formspree form ID
+    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ email: email }),
+    // });
+
+    form.style.display = 'none';
+    success.style.display = 'flex';
+
+    setTimeout(function () {
+      window.location.href = 'https://app.e-talase.com';
+    }, 1500);
+  });
+}
+
+setupForm('wl-hero',   'wl-hero-ok');
+setupForm('wl-footer', 'wl-footer-ok');
+</script>
+</body>
+</html>

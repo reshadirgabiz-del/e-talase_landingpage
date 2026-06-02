@@ -1,0 +1,21 @@
+{
+  "name": "e-talase",
+  "short_name": "e-talase",
+  "description": "Toko online kamu sendiri, bukan sekadar lapak marketplace.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4ede0",
+  "theme_color": "#5d6b40",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
