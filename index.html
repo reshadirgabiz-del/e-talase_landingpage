@@ -846,6 +846,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   grid-template-columns: 1.15fr 1fr 1fr 1.2fr;
   width: 100%;
 }
+.compare-table [role="row"] { display: contents; }
 .compare-head { padding: 16px; background: var(--paper); }
 .compare-head.etal {
   background: var(--accent);
@@ -1262,6 +1263,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
         <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
         <button type="submit">Daftar sekarang →</button>
       </form>
+      <p class="wl-error" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Ups, ada masalah. Coba lagi ya.</p>
       <div class="wl-success" id="wl-hero-ok" role="status">
         <span class="check">✓</span>
         <span>Makasih — kami kabari begitu akun kamu siap.</span>
@@ -1736,6 +1738,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
       <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
       <button type="submit">Daftar sekarang →</button>
     </form>
+    <p class="wl-error" style="display:none;color:#f1948a;font-size:13px;margin-top:6px;">Ups, ada masalah. Coba lagi ya.</p>
     <div class="wl-success dark" id="wl-footer-ok" role="status">
       <span class="check">✓</span>
       <span>Makasih — kami kabari begitu akun kamu siap.</span>
@@ -1788,6 +1791,17 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
 })();
 
 /* ── Waitlist forms ───────────────────────────────────────────────────── */
+var BACKEND_URL = 'https://e-talase-landingpage-backend.vercel.app';
+
+function getUtmParams() {
+  var p = new URLSearchParams(window.location.search);
+  return {
+    utm_source:   p.get('utm_source')   || undefined,
+    utm_medium:   p.get('utm_medium')   || undefined,
+    utm_campaign: p.get('utm_campaign') || undefined,
+  };
+}
+
 function setupForm(formId, successId) {
   var form    = document.getElementById(formId);
   var success = document.getElementById(successId);
@@ -1798,20 +1812,32 @@ function setupForm(formId, successId) {
     var email = form.querySelector('input[type="email"]').value.trim();
     if (!email) return;
 
-    // Optional: POST to Formspree
-    // Replace YOUR_FORM_ID with your actual Formspree form ID
-    // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify({ email: email }),
-    // });
+    var btn = form.querySelector('button[type="submit"]');
+    if (btn) btn.disabled = true;
 
-    form.style.display = 'none';
-    success.style.display = 'flex';
+    var payload = Object.assign({ email: email }, getUtmParams());
+    // Remove undefined keys
+    Object.keys(payload).forEach(function (k) { if (payload[k] === undefined) delete payload[k]; });
 
-    setTimeout(function () {
-      window.location.href = 'https://app.e-talase.com';
-    }, 1500);
+    fetch(BACKEND_URL + '/waitlist', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('failed');
+        form.style.display = 'none';
+        success.style.display = 'flex';
+        gtag('event', 'waitlist_signup', { form_id: formId });
+        setTimeout(function () {
+          window.location.href = 'https://app.e-talase.com';
+        }, 1500);
+      })
+      .catch(function () {
+        if (btn) btn.disabled = false;
+        var err = form.querySelector('.wl-error');
+        if (err) err.style.display = 'block';
+      });
   });
 }
 
