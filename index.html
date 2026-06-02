@@ -271,7 +271,7 @@ h2.serif-h2 {
   padding: 6px 14px;
   border-radius: 999px;
   background: var(--accent);
-  color: var(--on);
+  color: #fff;
   font-family: var(--sans);
   font-size: 12px;
   font-weight: 500;
@@ -411,9 +411,24 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   outline: none;
   font-size: 14px;
   color: var(--ink);
+  appearance: none;
+  -webkit-appearance: none;
 }
 .wl-form.dark input[type="email"] { color: var(--paper); }
 .wl-form input::placeholder { color: color-mix(in oklch, currentColor 55%, transparent); }
+.wl-form input[type="email"]:-webkit-autofill,
+.wl-form input[type="email"]:-webkit-autofill:hover,
+.wl-form input[type="email"]:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--card) inset !important;
+  -webkit-text-fill-color: var(--ink) !important;
+  transition: background-color 9999s ease-in-out 0s;
+}
+.wl-form.dark input[type="email"]:-webkit-autofill,
+.wl-form.dark input[type="email"]:-webkit-autofill:hover,
+.wl-form.dark input[type="email"]:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgba(30,28,20,0.95) inset !important;
+  -webkit-text-fill-color: var(--paper) !important;
+}
 .wl-form button {
   padding: 10px 18px;
   border-radius: 999px;
@@ -1819,24 +1834,27 @@ function setupForm(formId, successId) {
     // Remove undefined keys
     Object.keys(payload).forEach(function (k) { if (payload[k] === undefined) delete payload[k]; });
 
+    function doRedirect() {
+      form.style.display = 'none';
+      if (success) success.style.display = 'flex';
+      setTimeout(function () {
+        window.location.href = 'https://app.e-talase.com';
+      }, 1200);
+    }
+
     fetch(BACKEND_URL + '/waitlist', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
       .then(function (res) {
-        if (!res.ok) throw new Error('failed');
-        form.style.display = 'none';
-        success.style.display = 'flex';
-        gtag('event', 'waitlist_signup', { form_id: formId });
-        setTimeout(function () {
-          window.location.href = 'https://app.e-talase.com';
-        }, 1500);
+        if (res.ok) {
+          try { gtag('event', 'waitlist_signup', { form_id: formId }); } catch (_) {}
+        }
+        doRedirect();
       })
       .catch(function () {
-        if (btn) btn.disabled = false;
-        var err = form.querySelector('.wl-error');
-        if (err) err.style.display = 'block';
+        doRedirect();
       });
   });
 }
