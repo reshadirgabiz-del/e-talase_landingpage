@@ -8,6 +8,7 @@
 <title>e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace</title>
 <meta name="description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama, tanpa kartu kredit." />
 <meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#5d6b40" />
 <link rel="canonical" href="https://e-talase.com/" />
 
 <!-- Open Graph -->
@@ -1212,7 +1213,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
     <li><a href="#fitur"   class="nav-text">Fitur</a></li>
     <li><a href="#bandingkan" class="nav-text">Bandingkan</a></li>
     <li><a href="#roadmap"    class="nav-text">Roadmap</a></li>
-    <li><a href="https://app.e-talase.com" class="nav-cta">Daftar sekarang</a></li>
+    <li><a href="https://app.e-talase.com" class="nav-cta" rel="noopener noreferrer">Daftar sekarang</a></li>
   </ul>
 </nav>
 
@@ -1558,40 +1559,49 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
     <div class="compare-scroll">
       <div class="compare-table" role="table" aria-label="Perbandingan marketplace, bangun sendiri, dan e-talase">
         <!-- Header -->
-        <div class="compare-head" role="columnheader"></div>
-        <div class="compare-head label" role="columnheader">Lewat<br>marketplace</div>
-        <div class="compare-head label" role="columnheader">Bangun web<br>sendiri</div>
-        <div class="compare-head etal" role="columnheader">Pakai<br>e-talase</div>
+        <div role="row">
+          <div class="compare-head" role="columnheader"></div>
+          <div class="compare-head label" role="columnheader">Lewat<br>marketplace</div>
+          <div class="compare-head label" role="columnheader">Bangun web<br>sendiri</div>
+          <div class="compare-head etal" role="columnheader">Pakai<br>e-talase</div>
+        </div>
         <!-- Rows -->
-        <div class="compare-cell row-label" role="cell">Biaya bulanan</div>
-        <div class="compare-cell" role="cell">Biaya + iklan, terasa pelan-pelan</div>
-        <div class="compare-cell" role="cell">Jutaan untuk developer &amp; server</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hemat — gratis bulan pertama</span></div>
-
-        <div class="compare-cell row-label" role="cell">Margin laba</div>
-        <div class="compare-cell" role="cell">Terpotong biaya &amp; promo</div>
-        <div class="compare-cell" role="cell">Utuh</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Utuh, masuk ke kantong sendiri</span></div>
-
-        <div class="compare-cell row-label" role="cell">Data pelanggan</div>
-        <div class="compare-cell" role="cell">Terbatas, bukan milikmu</div>
-        <div class="compare-cell" role="cell">Milikmu</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>100% milikmu</span></div>
-
-        <div class="compare-cell row-label" role="cell">Waktu tayang</div>
-        <div class="compare-cell" role="cell">Instan</div>
-        <div class="compare-cell" role="cell">2 minggu – 3 bulan</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hari ini juga</span></div>
-
-        <div class="compare-cell row-label" role="cell">Butuh tim teknis</div>
-        <div class="compare-cell" role="cell">Nggak</div>
-        <div class="compare-cell" role="cell">Tinggi (developer + maintenance)</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak perlu</span></div>
-
-        <div class="compare-cell row-label" role="cell">Ketergantungan</div>
-        <div class="compare-cell" role="cell">Tinggi ke platform</div>
-        <div class="compare-cell" role="cell">Nggak ada</div>
-        <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak ada</span></div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Biaya bulanan</div>
+          <div class="compare-cell" role="cell">Biaya + iklan, terasa pelan-pelan</div>
+          <div class="compare-cell" role="cell">Jutaan untuk developer &amp; server</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hemat — gratis bulan pertama</span></div>
+        </div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Margin laba</div>
+          <div class="compare-cell" role="cell">Terpotong biaya &amp; promo</div>
+          <div class="compare-cell" role="cell">Utuh</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Utuh, masuk ke kantong sendiri</span></div>
+        </div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Data pelanggan</div>
+          <div class="compare-cell" role="cell">Terbatas, bukan milikmu</div>
+          <div class="compare-cell" role="cell">Milikmu</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>100% milikmu</span></div>
+        </div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Waktu tayang</div>
+          <div class="compare-cell" role="cell">Instan</div>
+          <div class="compare-cell" role="cell">2 minggu – 3 bulan</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hari ini juga</span></div>
+        </div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Butuh tim teknis</div>
+          <div class="compare-cell" role="cell">Nggak</div>
+          <div class="compare-cell" role="cell">Tinggi (developer + maintenance)</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak perlu</span></div>
+        </div>
+        <div role="row">
+          <div class="compare-cell row-label" role="cell">Ketergantungan</div>
+          <div class="compare-cell" role="cell">Tinggi ke platform</div>
+          <div class="compare-cell" role="cell">Nggak ada</div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak ada</span></div>
+        </div>
       </div>
     </div>
   </div>
