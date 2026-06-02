@@ -1197,6 +1197,15 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   .founder-ava { display: none; }
 }
 </style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8YK6RQ4MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-H8YK6RQ4MX');
+</script>
 </head>
 <body>
 
@@ -1808,6 +1817,59 @@ function setupForm(formId, successId) {
 
 setupForm('wl-hero',   'wl-hero-ok');
 setupForm('wl-footer', 'wl-footer-ok');
+
+/* ── Section read tracking ───────────────────────────────────────────── */
+(function () {
+  var sections = [
+    { el: document.querySelector('.hero'),            name: 'hero' },
+    { el: document.getElementById('masalah'),         name: 'problem' },
+    { el: document.getElementById('fitur'),           name: 'features' },
+    { el: document.getElementById('bandingkan'),      name: 'comparison' },
+    { el: document.querySelector('.founder-section'), name: 'founder' },
+    { el: document.querySelector('.perks-section'),   name: 'perks' },
+    { el: document.getElementById('roadmap'),         name: 'roadmap' },
+    { el: document.querySelector('footer'),           name: 'footer' },
+  ].filter(function (s) { return s.el; });
+
+  var seen = {};
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting && !seen[entry.target.dataset.trackName]) {
+        seen[entry.target.dataset.trackName] = true;
+        gtag('event', 'section_view', {
+          section_name: entry.target.dataset.trackName,
+        });
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(function (s) {
+    s.el.dataset.trackName = s.name;
+    observer.observe(s.el);
+  });
+})();
+
+/* ── Traffic source tracking ─────────────────────────────────────────── */
+(function () {
+  var params  = new URLSearchParams(window.location.search);
+  var referrer = document.referrer;
+
+  var source   = params.get('utm_source')   || (referrer ? new URL(referrer).hostname : 'direct');
+  var medium   = params.get('utm_medium')   || (referrer ? 'referral' : 'none');
+  var campaign = params.get('utm_campaign') || 'none';
+  var content  = params.get('utm_content')  || 'none';
+  var term     = params.get('utm_term')     || 'none';
+
+  gtag('event', 'traffic_source', {
+    traffic_source:   source,
+    traffic_medium:   medium,
+    traffic_campaign: campaign,
+    traffic_content:  content,
+    traffic_term:     term,
+    full_referrer:    referrer || 'none',
+  });
+})();
 </script>
 </body>
 </html>
