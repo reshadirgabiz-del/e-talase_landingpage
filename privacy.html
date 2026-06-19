@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Kebijakan Privasi — e-talase</title>
+<meta name="description" content="Kebijakan Privasi e-talase. Menjelaskan bagaimana kami mengumpulkan, menggunakan, menyimpan, dan melindungi data pribadi merchant dan pengguna sesuai UU PDP No. 27 Tahun 2022 dan pedoman Google Play." />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#5d6b40" />
+<link rel="canonical" href="https://e-talase.com/privacy.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://e-talase.com/privacy.html" />
+<meta property="og:site_name" content="e-talase" />
+<meta property="og:title" content="Kebijakan Privasi — e-talase" />
+<meta property="og:description" content="Kebijakan Privasi e-talase — UU PDP &amp; standar Google Play." />
+<meta property="og:locale" content="id_ID" />
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --paper:   #f4ede0;
+  --card:    #fbf6ec;
+  --chrome:  #efe7d6;
+  --ink:     #1c1a14;
+  --muted:   #6e6757;
+  --line:    rgba(28,26,20,0.12);
+  --accent:  #5d6b40;
+  --on:      #f4ede0;
+  --sage:    #5d6b40;
+  --terra:   #b65a30;
+  --butter:  #e8b85a;
+  --rose:    #c97e6e;
+  --serif:   'Instrument Serif', ui-serif, Georgia, serif;
+  --sans:    'Geist', ui-sans-serif, system-ui, sans-serif;
+  --mono:    'JetBrains Mono', monospace;
+  --gutter:  64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+/* ── Nav ──────────────────────────────────────────────────────────────── */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px var(--gutter);
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.wordmark {
+  font-family: var(--serif);
+  font-size: 24px;
+  letter-spacing: -.01em;
+  line-height: 1;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.wordmark .bracket { color: var(--accent); font-weight: 300; }
+.wordmark .e-italic { color: var(--accent); font-style: italic; }
+.wordmark .dot {
+  display: inline-block;
+  width: 3px; height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+  margin: 0 3px;
+  position: relative;
+  top: -2px;
+}
+.nav-badge {
+  margin-left: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklch, var(--terra) 40%, var(--line));
+  background: color-mix(in oklch, var(--terra) 12%, var(--paper));
+  color: var(--terra);
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  list-style: none;
+}
+.nav-links a {
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink);
+  text-decoration: none;
+}
+.nav-cta {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* ── Page layout ──────────────────────────────────────────────────────── */
+.legal-wrap { max-width: 760px; margin: 0 auto; padding: 80px var(--gutter) 120px; }
+.kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.legal-h1 {
+  font-family: var(--serif);
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  font-weight: 400;
+  margin: 14px 0 12px;
+  color: var(--ink);
+}
+.legal-h1 em { font-style: italic; color: var(--accent); }
+.legal-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+.legal-intro {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 22px 26px;
+  margin: 36px 0 48px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink);
+}
+.toc {
+  border: 1px solid var(--line);
+  background: color-mix(in oklch, var(--card) 60%, var(--paper));
+  padding: 22px 26px;
+  margin-bottom: 56px;
+}
+.toc h2 {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.toc ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+  list-style: decimal;
+  padding-left: 18px;
+  font-size: 14px;
+}
+.toc a { color: var(--ink); text-decoration: none; }
+.toc a:hover { color: var(--accent); text-decoration: underline; }
+
+.legal-section { margin-bottom: 48px; }
+.legal-section h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -.01em;
+  font-weight: 400;
+  color: var(--ink);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 18px;
+}
+.legal-section h3 {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 22px 0 10px;
+}
+.legal-section p,
+.legal-section li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: color-mix(in oklch, var(--ink) 85%, var(--muted));
+}
+.legal-section p + p { margin-top: 14px; }
+.legal-section ul,
+.legal-section ol { margin: 12px 0 12px 22px; }
+.legal-section li { margin-bottom: 6px; }
+.legal-section strong { color: var(--ink); font-weight: 600; }
+.legal-section a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 18px 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.data-table th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: color-mix(in oklch, var(--chrome) 60%, var(--paper));
+  font-weight: 500;
+}
+.data-table tr:last-child td { border-bottom: none; }
+
+.callout {
+  border-left: 3px solid var(--accent);
+  background: color-mix(in oklch, var(--accent) 6%, var(--paper));
+  padding: 16px 20px;
+  margin: 18px 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.callout.warn { border-left-color: var(--terra); background: color-mix(in oklch, var(--terra) 6%, var(--paper)); }
+
+.legal-foot {
+  margin-top: 64px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.legal-foot a { color: var(--muted); text-decoration: none; }
+.legal-foot a:hover { color: var(--accent); }
+
+/* ── Footer ───────────────────────────────────────────────────────────── */
+.mini-footer {
+  border-top: 1px solid var(--line);
+  padding: 28px var(--gutter);
+  text-align: center;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+  :root { --gutter: 24px; }
+  .legal-h1 { font-size: 40px; }
+  .legal-section h2 { font-size: 22px; }
+  .toc ol { grid-template-columns: 1fr; }
+  .nav-links .nav-text { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" aria-label="Navigasi utama">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <a href="/" class="wordmark" aria-label="e-talase beranda">
+      <span class="bracket">[</span><span class="e-italic">e</span><span class="bracket">]</span><span class="dot"></span>talase
+    </a>
+    <span class="nav-badge">● Legal</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="/pricing.html" class="nav-text">Harga</a></li>
+    <li><a href="/" class="nav-text">Beranda</a></li>
+    <li><a href="https://app.e-talase.com" class="nav-cta" rel="noopener noreferrer" style="color:white">Buka aplikasi</a></li>
+  </ul>
+</nav>
+
+<main class="legal-wrap">
+
+  <p class="kicker">Dokumen Legal · Privacy</p>
+  <h1 class="legal-h1">Kebijakan <em>Privasi.</em></h1>
+  <p class="legal-meta">Berlaku sejak 1 Juni 2026 · Versi 1.0 · Terakhir diperbarui 19 Juni 2026</p>
+
+  <div class="legal-intro">
+    Kebijakan Privasi ini menjelaskan bagaimana <strong>e-Talase</strong> ("kami", "e-talase") mengumpulkan,
+    menggunakan, menyimpan, melindungi, dan membagikan data pribadi Anda — baik sebagai pengunjung situs
+    <strong>e-talase.com</strong>, pengguna aplikasi web <strong>app.e-talase.com</strong>, maupun pengguna
+    aplikasi mobile <strong>e-talase</strong> di Google Play Store. Kebijakan ini disusun mengikuti
+    Undang-Undang Republik Indonesia No. 27 Tahun 2022 tentang Pelindungan Data Pribadi (UU PDP),
+    standar Data Safety Google Play, serta praktik terbaik perlindungan data internasional (GDPR-aligned).
+  </div>
+
+  <nav class="toc" aria-label="Daftar isi kebijakan">
+    <h2>Daftar isi</h2>
+    <ol>
+      <li><a href="#s1">Pengelola platform</a></li>
+      <li><a href="#s2">Lingkup &amp; produk</a></li>
+      <li><a href="#s3">Data yang kami kumpulkan</a></li>
+      <li><a href="#s4">Tujuan pemrosesan</a></li>
+      <li><a href="#s5">Dasar hukum</a></li>
+      <li><a href="#s6">Berbagi data &amp; pihak ketiga</a></li>
+      <li><a href="#s7">Transfer data lintas negara</a></li>
+      <li><a href="#s8">Retensi &amp; penghapusan</a></li>
+      <li><a href="#s9">Hapus akun &amp; data</a></li>
+      <li><a href="#s10">Hak-hak Anda</a></li>
+      <li><a href="#s11">Keamanan data</a></li>
+      <li><a href="#s12">Izin &amp; SDK aplikasi mobile</a></li>
+      <li><a href="#s13">Cookie &amp; pelacak</a></li>
+      <li><a href="#s14">Anak di bawah umur</a></li>
+      <li><a href="#s15">Perubahan kebijakan</a></li>
+      <li><a href="#s16">Hubungi kami</a></li>
+    </ol>
+  </nav>
+
+  <!-- 1 -->
+  <section class="legal-section" id="s1">
+    <h2>1. Pengelola Platform</h2>
+    <p>
+      <strong>e-Talase</strong><br/>
+      Platform toko online untuk seller mandiri Indonesia.<br/>
+      Lokasi: Indonesia 🇮🇩<br/>
+      Email kontak privasi: <a href="mailto:info@mail.e-talase.com">info@mail.e-talase.com</a><br/>
+      Petugas Pelindungan Data (Data Protection Officer): <a href="mailto:info@mail.e-talase.com">info@mail.e-talase.com</a>
+    </p>
+    <p>
+      Dalam konteks penggunaan platform oleh merchant untuk mengelola data pelanggan akhir mereka, e-talase
+      bertindak sebagai <strong>Pemroses Data</strong> (data processor), dan merchant bertindak sebagai
+      <strong>Pengendali Data</strong> (data controller) atas data pelanggan akhir tersebut.
+    </p>
+  </section>
+
+  <!-- 2 -->
+  <section class="legal-section" id="s2">
+    <h2>2. Lingkup &amp; Produk yang Dicakup</h2>
+    <p>Kebijakan ini berlaku untuk seluruh permukaan produk e-talase:</p>
+    <ul>
+      <li>Situs marketing <strong>e-talase.com</strong> (termasuk halaman waitlist).</li>
+      <li>Aplikasi web merchant <strong>app.e-talase.com</strong>.</li>
+      <li>Aplikasi mobile <strong>e-talase</strong> di Google Play Store (Android) dan App Store (iOS).</li>
+      <li>Halaman toko publik yang di-host melalui platform (<em>storefront</em>).</li>
+      <li>API publik dan integrasi pihak ketiga yang resmi.</li>
+    </ul>
+  </section>
+
+  <!-- 3 -->
+  <section class="legal-section" id="s3">
+    <h2>3. Data Pribadi yang Kami Kumpulkan</h2>
+    <p>
+      Untuk transparansi penuh — sejalan dengan standar <em>Data Safety</em> Google Play — berikut kategori
+      data yang mungkin kami kumpulkan, beserta tujuannya:
+    </p>
+
+    <h3>A. Data yang Anda berikan secara langsung</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Kategori</th><th>Contoh</th><th>Tujuan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Informasi pribadi</td><td>Nama, email, nomor telepon</td><td>Pendaftaran akun, verifikasi, komunikasi</td></tr>
+        <tr><td>Informasi bisnis</td><td>Nama toko, alamat toko, koordinat lokasi asal kirim</td><td>Setup toko, perhitungan ongkir</td></tr>
+        <tr><td>Konten unggahan</td><td>Foto produk, deskripsi, harga, video</td><td>Menampilkan produk di storefront</td></tr>
+        <tr><td>Informasi pembayaran</td><td>Token transaksi, bukti transfer, 4 digit terakhir kartu</td><td>Pemrosesan langganan. <strong>Detail kartu lengkap tidak pernah disimpan</strong> — diproses oleh payment gateway berlisensi.</td></tr>
+        <tr><td>Komunikasi support</td><td>Pesan ke tim CS, lampiran</td><td>Memberi dukungan teknis</td></tr>
+      </tbody>
+    </table>
+
+    <h3>B. Data yang dikumpulkan secara otomatis</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Kategori</th><th>Contoh</th><th>Tujuan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Identifikasi perangkat</td><td>ID perangkat, advertising ID (opsional), model, OS, versi aplikasi</td><td>Diagnostik, anti-fraud, kompatibilitas</td></tr>
+        <tr><td>Data jaringan</td><td>Alamat IP, ISP, perkiraan kota</td><td>Keamanan, anti-fraud, lokalisasi</td></tr>
+        <tr><td>Data interaksi aplikasi</td><td>Halaman/fitur yang diakses, durasi, klik, crash log</td><td>Peningkatan pengalaman, perbaikan bug</td></tr>
+        <tr><td>Performa &amp; diagnostik</td><td>Stack trace error, waktu respon API, metrik render</td><td>Stabilitas dan kualitas layanan</td></tr>
+      </tbody>
+    </table>
+
+    <h3>C. Data dengan persetujuan eksplisit (opsional)</h3>
+    <table class="data-table">
+      <thead>
+        <tr><th>Kategori</th><th>Mengapa diminta</th><th>Bisa dimatikan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Lokasi presisi</td><td>Mengisi otomatis koordinat toko / titik kirim</td><td>Ya — via pengaturan OS</td></tr>
+        <tr><td>Akses kamera</td><td>Memotret produk &amp; unggah bukti transfer</td><td>Ya — via pengaturan OS</td></tr>
+        <tr><td>Akses galeri/media</td><td>Memilih foto produk yang akan diunggah</td><td>Ya — via pengaturan OS</td></tr>
+        <tr><td>Notifikasi push</td><td>Pemberitahuan pesanan masuk &amp; status pembayaran</td><td>Ya — via pengaturan OS / app</td></tr>
+        <tr><td>Email pemasaran</td><td>Tips, pembaruan fitur, promo</td><td>Ya — via tautan unsubscribe di setiap email</td></tr>
+      </tbody>
+    </table>
+
+    <h3>D. Data pelanggan akhir merchant</h3>
+    <p>
+      Saat merchant menggunakan e-talase untuk mengelola pesanannya, kami menyimpan data pelanggan akhir
+      (nama, alamat pengiriman, nomor telepon, rincian pesanan) <strong>atas nama merchant</strong>.
+      Dalam konteks ini, merchant bertindak sebagai Pengendali Data dan kami sebagai Pemroses Data.
+    </p>
+
+    <div class="callout">
+      <strong>Yang TIDAK kami kumpulkan:</strong> kami tidak mengumpulkan data kesehatan, data biometrik,
+      pesan SMS, log telepon, daftar kontak telepon, riwayat browsing di luar aplikasi, atau audio dari
+      mikrofon tanpa interaksi eksplisit.
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="legal-section" id="s4">
+    <h2>4. Tujuan Pemrosesan Data</h2>
+    <p>Kami memproses data pribadi Anda untuk tujuan-tujuan berikut, dan tidak untuk tujuan lain:</p>
+    <ul>
+      <li>Menyediakan, mengoperasikan, dan memelihara fitur platform.</li>
+      <li>Membuat dan mengelola akun merchant.</li>
+      <li>Memproses transaksi berlangganan dan mengirim konfirmasi.</li>
+      <li>Memberi dukungan pelanggan dan menjawab pertanyaan.</li>
+      <li>Mengirim notifikasi penting terkait layanan (transaksi, keamanan, perubahan kebijakan).</li>
+      <li>Mendeteksi, mencegah, dan menyelidiki penipuan, penyalahgunaan, dan pelanggaran ToS.</li>
+      <li>Meningkatkan pengalaman pengguna berbasis analitik agregat.</li>
+      <li>Memenuhi kewajiban hukum, perpajakan, dan permintaan otoritas yang sah.</li>
+      <li>Mengirim materi promosi — <strong>hanya bila Anda menyetujui</strong>.</li>
+    </ul>
+  </section>
+
+  <!-- 5 -->
+  <section class="legal-section" id="s5">
+    <h2>5. Dasar Hukum Pemrosesan</h2>
+    <p>Berdasarkan Pasal 20 UU PDP No. 27/2022, kami memproses data pribadi atas dasar:</p>
+    <ul>
+      <li><strong>Pelaksanaan perjanjian</strong> — Syarat Layanan yang Anda setujui saat mendaftar.</li>
+      <li><strong>Persetujuan</strong> — untuk pemasaran, lokasi presisi, dan cookie non-esensial.</li>
+      <li><strong>Kepentingan sah</strong> — keamanan platform, pencegahan penipuan, peningkatan layanan.</li>
+      <li><strong>Kewajiban hukum</strong> — perpajakan, anti pencucian uang, perintah pengadilan.</li>
+    </ul>
+  </section>
+
+  <!-- 6 -->
+  <section class="legal-section" id="s6">
+    <h2>6. Berbagi Data dengan Pihak Ketiga</h2>
+    <p>
+      <strong>Kami tidak menjual data pribadi Anda kepada pihak manapun.</strong> Kami hanya berbagi data
+      kepada pihak ketiga seperlunya, dengan kategori berikut:
+    </p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Pihak ketiga</th><th>Tujuan</th><th>Data yang dibagikan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Penyedia autentikasi (Clerk)</td><td>Login, manajemen sesi</td><td>Email, nama, ID pengguna</td></tr>
+        <tr><td>Payment gateway (Midtrans / sejenis)</td><td>Pemrosesan langganan</td><td>Token transaksi, nominal, identitas merchant</td></tr>
+        <tr><td>Database &amp; storage (Supabase)</td><td>Penyimpanan data platform</td><td>Seluruh data platform, terenkripsi at-rest</td></tr>
+        <tr><td>Hosting &amp; CDN (Vercel/Netlify, Cloudflare)</td><td>Penyajian aplikasi</td><td>Permintaan HTTP, IP, header browser</td></tr>
+        <tr><td>Email transactional (Resend / sejenis)</td><td>Notifikasi sistem</td><td>Email, nama, konten transaksional</td></tr>
+        <tr><td>Analitik (Google Analytics 4 — anonim)</td><td>Memahami penggunaan agregat</td><td>Event interaksi, perangkat, IP teranonimisasi</td></tr>
+        <tr><td>Penyedia crash report</td><td>Diagnostik kegagalan</td><td>Stack trace, versi aplikasi, model perangkat</td></tr>
+        <tr><td>Otoritas hukum</td><td>Kepatuhan perintah resmi</td><td>Hanya bila diwajibkan undang-undang</td></tr>
+      </tbody>
+    </table>
+    <p>
+      Setiap pihak ketiga di atas terikat dengan <em>Data Processing Agreement</em> (DPA) yang menjamin
+      standar perlindungan data yang setara atau lebih ketat.
+    </p>
+  </section>
+
+  <!-- 7 -->
+  <section class="legal-section" id="s7">
+    <h2>7. Transfer Data Lintas Negara</h2>
+    <p>
+      Sebagian penyedia layanan kami (Supabase, Clerk, Vercel, dsb.) mengoperasikan infrastruktur di luar
+      Indonesia — antara lain Singapura, Amerika Serikat, dan Eropa. Saat data Anda ditransfer keluar wilayah
+      Indonesia, kami memastikan negara penerima memiliki tingkat pelindungan setara, atau penyedia tersebut
+      tunduk pada <strong>Standard Contractual Clauses</strong> (SCC) GDPR — sesuai Pasal 56 UU PDP.
+    </p>
+  </section>
+
+  <!-- 8 -->
+  <section class="legal-section" id="s8">
+    <h2>8. Retensi &amp; Penghapusan Data</h2>
+    <p>Kami menyimpan data hanya selama diperlukan, dengan periode berikut:</p>
+    <ul>
+      <li><strong>Akun aktif:</strong> selama akun digunakan.</li>
+      <li><strong>Setelah akun ditutup:</strong> 30 hari periode pemulihan, lalu dihapus permanen.</li>
+      <li><strong>Catatan keuangan &amp; pajak:</strong> 5 (lima) tahun, sesuai UU Perpajakan Indonesia.</li>
+      <li><strong>Log keamanan &amp; audit:</strong> 12 bulan.</li>
+      <li><strong>Backup terenkripsi:</strong> dihapus mengikuti rotasi standar maksimum 90 hari.</li>
+      <li><strong>Data pemasaran (mailing list):</strong> hingga Anda berhenti berlangganan.</li>
+    </ul>
+  </section>
+
+  <!-- 9 -->
+  <section class="legal-section" id="s9">
+    <h2>9. Hapus Akun &amp; Data <span style="font-size:13px;color:var(--terra);font-family:var(--mono);letter-spacing:.08em;">· Wajib Google Play</span></h2>
+    <p>
+      Sesuai pedoman <strong>Google Play Account Deletion Policy</strong>, Anda berhak menghapus akun
+      e-talase beserta data pribadi yang terhubung — kapan saja, tanpa perlu menghubungi support.
+    </p>
+
+    <h3>Cara menghapus akun &amp; data:</h3>
+    <ol>
+      <li>
+        <strong>Lewat aplikasi:</strong> buka <em>Pengaturan → Akun → Hapus Akun</em>, ikuti konfirmasi.
+        Tersedia di aplikasi web dan mobile.
+      </li>
+      <li>
+        <strong>Lewat halaman web (tanpa login):</strong> kunjungi
+        <a href="https://app.e-talase.com/account/delete">app.e-talase.com/account/delete</a> dan
+        ajukan permintaan dengan email akun Anda. Kami akan mengirim tautan verifikasi.
+      </li>
+      <li>
+        <strong>Lewat email:</strong> kirim permintaan ke
+        <a href="mailto:info@mail.e-talase.com?subject=Permintaan%20Hapus%20Akun">info@mail.e-talase.com</a>
+        dari email yang terdaftar dengan subjek "Permintaan Hapus Akun".
+      </li>
+    </ol>
+
+    <h3>Apa yang dihapus:</h3>
+    <ul>
+      <li>Profil akun, kredensial login, dan preferensi.</li>
+      <li>Toko, produk, foto, deskripsi, dan storefront yang Anda buat.</li>
+      <li>Daftar tim &amp; undangan internal.</li>
+      <li>Riwayat aktivitas, log, dan analytics yang dapat diidentifikasi.</li>
+    </ul>
+
+    <h3>Apa yang dipertahankan (dianonimkan):</h3>
+    <ul>
+      <li>
+        <strong>Catatan transaksi &amp; faktur pajak</strong> — disimpan 5 tahun (UU Perpajakan), namun
+        dipisahkan dari identitas Anda di mana memungkinkan.
+      </li>
+      <li>
+        <strong>Log keamanan agregat</strong> yang sudah teranonimisasi, untuk audit dan pencegahan
+        penyalahgunaan berulang.
+      </li>
+    </ul>
+
+    <div class="callout warn">
+      <strong>Tenggat penyelesaian:</strong> permintaan hapus akun diselesaikan dalam maksimal
+      <strong>30 hari kalender</strong>, biasanya jauh lebih cepat. Anda akan menerima konfirmasi email
+      saat penghapusan selesai.
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="legal-section" id="s10">
+    <h2>10. Hak-Hak Anda</h2>
+    <p>Berdasarkan UU PDP No. 27/2022, Anda memiliki hak-hak berikut:</p>
+    <ul>
+      <li><strong>Hak akses</strong> — meminta salinan data pribadi yang kami simpan tentang Anda.</li>
+      <li><strong>Hak koreksi</strong> — memperbaiki data yang tidak akurat atau tidak lengkap.</li>
+      <li><strong>Hak penghapusan</strong> — meminta penghapusan data (lihat bagian 9).</li>
+      <li><strong>Hak pembatasan pemrosesan</strong> — meminta jeda atas pemrosesan tertentu.</li>
+      <li><strong>Hak portabilitas</strong> — menerima data Anda dalam format terstruktur (JSON/CSV).</li>
+      <li><strong>Hak menarik persetujuan</strong> — kapan saja, tanpa memengaruhi keabsahan pemrosesan sebelumnya.</li>
+      <li><strong>Hak mengajukan keberatan</strong> — atas pemrosesan untuk pemasaran langsung.</li>
+      <li><strong>Hak mengajukan pengaduan</strong> — kepada lembaga pelindungan data pribadi yang berwenang di Indonesia.</li>
+    </ul>
+    <p>
+      Untuk menggunakan hak di atas, hubungi
+      <a href="mailto:info@mail.e-talase.com">info@mail.e-talase.com</a>. Kami akan merespons
+      paling lambat <strong>30 hari kalender</strong> sejak permintaan diverifikasi.
+    </p>
+  </section>
+
+  <!-- 11 -->
+  <section class="legal-section" id="s11">
+    <h2>11. Keamanan Data</h2>
+    <p>Kami menerapkan langkah teknis dan organisasional sesuai standar industri:</p>
+    <ul>
+      <li>Enkripsi <strong>in transit</strong> menggunakan TLS 1.2+ untuk seluruh komunikasi.</li>
+      <li>Enkripsi <strong>at rest</strong> untuk database, storage, dan backup.</li>
+      <li>Kontrol akses berbasis peran (RBAC) dan prinsip <em>least privilege</em>.</li>
+      <li>Otentikasi multi-faktor untuk akses tim internal.</li>
+      <li>Pemantauan keamanan 24/7 dan audit log akses data sensitif.</li>
+      <li>Patching kerentanan dependensi secara otomatis dan berkala.</li>
+      <li>Pengujian keamanan internal dan rotasi kredensial yang terjadwal.</li>
+    </ul>
+    <p>
+      <strong>Notifikasi pelanggaran:</strong> Apabila terjadi insiden yang berpotensi memengaruhi data pribadi
+      Anda, kami akan memberi tahu Anda dan otoritas terkait dalam waktu <strong>72 jam</strong> sejak
+      insiden terdeteksi — sesuai Pasal 46 UU PDP.
+    </p>
+  </section>
+
+  <!-- 12 -->
+  <section class="legal-section" id="s12">
+    <h2>12. Izin Aplikasi Mobile &amp; SDK Pihak Ketiga</h2>
+    <p>Aplikasi mobile e-talase di Google Play meminta izin berikut, hanya saat dibutuhkan:</p>
+    <table class="data-table">
+      <thead>
+        <tr><th>Izin Android</th><th>Untuk apa</th><th>Wajib?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>INTERNET</td><td>Mengakses API platform</td><td>Ya</td></tr>
+        <tr><td>CAMERA</td><td>Foto produk, scan QR pembayaran</td><td>Tidak — bisa di-skip</td></tr>
+        <tr><td>READ_MEDIA_IMAGES</td><td>Upload foto produk dari galeri</td><td>Tidak</td></tr>
+        <tr><td>POST_NOTIFICATIONS</td><td>Notifikasi pesanan masuk</td><td>Tidak</td></tr>
+        <tr><td>ACCESS_FINE_LOCATION</td><td>Mengisi otomatis lokasi toko</td><td>Tidak</td></tr>
+        <tr><td>VIBRATE</td><td>Umpan balik haptik notifikasi</td><td>Tidak</td></tr>
+      </tbody>
+    </table>
+    <p>SDK pihak ketiga yang disertakan dalam build mobile (semua bersertifikat &amp; sesuai Play Store):</p>
+    <ul>
+      <li><strong>Firebase Cloud Messaging</strong> — pengiriman push notification.</li>
+      <li><strong>Firebase Crashlytics</strong> — laporan crash &amp; performa.</li>
+      <li><strong>Clerk SDK</strong> — autentikasi pengguna.</li>
+      <li><strong>Midtrans SDK</strong> (atau sejenis) — payment.</li>
+    </ul>
+  </section>
+
+  <!-- 13 -->
+  <section class="legal-section" id="s13">
+    <h2>13. Cookie &amp; Teknologi Pelacak</h2>
+    <p>Pada situs web kami, kami menggunakan tiga kategori cookie:</p>
+    <ul>
+      <li>
+        <strong>Esensial</strong> — diperlukan untuk fungsi dasar (sesi login, CSRF, preferensi bahasa).
+        Tidak memerlukan persetujuan.
+      </li>
+      <li>
+        <strong>Analitik</strong> — membantu kami memahami penggunaan agregat (Google Analytics 4 dengan
+        IP teranonimisasi). Memerlukan persetujuan via banner cookie.
+      </li>
+      <li>
+        <strong>Preferensi</strong> — menyimpan pengaturan UI seperti tema atau bahasa.
+      </li>
+    </ul>
+    <p>
+      Anda dapat menolak atau menghapus cookie kapan saja melalui pengaturan browser. Beberapa fitur
+      mungkin tidak berfungsi optimal jika cookie esensial dinonaktifkan.
+    </p>
+  </section>
+
+  <!-- 14 -->
+  <section class="legal-section" id="s14">
+    <h2>14. Anak di Bawah Umur</h2>
+    <p>
+      e-talase ditujukan untuk pelaku usaha dan tidak diperuntukkan bagi pengguna di bawah <strong>17 tahun</strong>.
+      Kami tidak dengan sengaja mengumpulkan data anak. Apabila orang tua/wali mendapati anak di bawah umur
+      telah mendaftar, harap hubungi kami di
+      <a href="mailto:info@mail.e-talase.com">info@mail.e-talase.com</a> dan kami akan segera menghapus akun
+      serta seluruh data terkait.
+    </p>
+  </section>
+
+  <!-- 15 -->
+  <section class="legal-section" id="s15">
+    <h2>15. Perubahan Kebijakan</h2>
+    <p>
+      Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Perubahan material akan
+      diumumkan melalui email terdaftar dan banner notifikasi di dalam aplikasi minimal
+      <strong>30 hari sebelum berlaku efektif</strong>. Versi historis tersedia atas permintaan.
+      Tanggal "Berlaku sejak" dan "Terakhir diperbarui" di bagian atas dokumen ini selalu mencerminkan versi terbaru.
+    </p>
+  </section>
+
+  <!-- 16 -->
+  <section class="legal-section" id="s16">
+    <h2>16. Hubungi Kami</h2>
+    <p>Untuk pertanyaan, permintaan, atau pengaduan terkait privasi:</p>
+    <p>
+      <strong>e-Talase</strong><br/>
+      Email: <a href="mailto:info@mail.e-talase.com">info@mail.e-talase.com</a><br/>
+      Subjek yang disarankan: "Privacy — [Akses / Koreksi / Hapus / Pengaduan]"
+    </p>
+    <p>
+      Kami menargetkan respon awal dalam <strong>3 hari kerja</strong> dan penyelesaian dalam
+      maksimal <strong>30 hari kalender</strong>.
+    </p>
+  </section>
+
+  <footer class="legal-foot">
+    <div>© 2026 e-Talase · Karya Anak Indonesia 🇮🇩</div>
+    <div>
+      <a href="/">Beranda</a> ·
+      <a href="/pricing.html">Harga</a> ·
+      <a href="/privacy.html">Privasi</a>
+    </div>
+  </footer>
+
+</main>
+
+<div class="mini-footer">UU PDP No. 27/2022 · Google Play Compliant · GDPR-aligned</div>
+
+</body>
+</html>
