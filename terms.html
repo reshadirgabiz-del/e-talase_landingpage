@@ -235,14 +235,19 @@ body {
 .legal-foot a:hover { color: var(--accent); }
 .mini-footer {
   border-top: 1px solid var(--line);
-  padding: 28px var(--gutter);
-  text-align: center;
+  padding: 24px var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
   font-family: var(--mono);
   font-size: 10px;
-  letter-spacing: .12em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--muted);
 }
+.mini-footer a { color: var(--muted); text-decoration: none; }
+.mini-footer a:hover { color: var(--accent); }
 @media (max-width: 720px) {
   :root { --gutter: 24px; }
   .legal-h1 { font-size: 40px; }
@@ -549,19 +554,17 @@ body {
     </div>
   </section>
 
-  <footer class="legal-foot">
-    <div>© 2026 e-Talase · Karya Anak Indonesia</div>
+  <footer class="mini-footer">
+    <div>© 2026 e-Talase · Karya Anak Indonesia 🇮🇩</div>
     <div>
       <a href="/">Beranda</a> ·
       <a href="/pricing.html">Harga</a> ·
       <a href="/terms.html">Syarat</a> ·
       <a href="/privacy.html">Privasi</a> ·
-      <a href="/support.html">Dukungan</a>
+      <a href="/support.html">Dukungan</a> ·
     </div>
   </footer>
 </main>
-
-<div class="mini-footer">UU PDP No. 27/2022 · Google Play Compliant · Terms of Service</div>
 
 </body>
 </html>
