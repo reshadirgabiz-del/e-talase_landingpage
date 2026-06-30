@@ -385,6 +385,16 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   color: var(--muted);
   text-transform: uppercase;
 }
+.hero-fit {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: calc(var(--lead) * 0.95);
+  color: var(--ink);
+  opacity: 0.78;
+  margin: -8px auto var(--cta-mt);
+  max-width: 540px;
+  line-height: 1.45;
+}
 
 /* ── Waitlist form ─────────────────────────────────────────────────────── */
 .wl-form {
@@ -839,6 +849,38 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   font-weight: 700;
 }
 .feature-bullet span { font-family: var(--sans); font-size: var(--body); color: var(--ink); line-height: 1.45; }
+.feature-subcard {
+  padding: calc(var(--feat-pad) * 0.75) var(--feat-pad);
+  border-radius: 18px;
+}
+.feature-subcard .feature-subcard-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+.feature-subcard .feature-tag-pill { margin: 0 auto 12px; }
+.feature-subcard h3 {
+  font-family: var(--serif);
+  font-size: var(--h3);
+  margin: 0 0 14px;
+  color: var(--ink);
+  line-height: 1.1;
+  letter-spacing: -.01em;
+  font-weight: 400;
+}
+.feature-subcard .desc {
+  font-family: var(--sans);
+  font-size: var(--body);
+  color: var(--muted);
+  margin: 0 auto 18px;
+  line-height: 1.55;
+  max-width: 560px;
+}
+.feature-subcard .feature-bullets {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: left;
+}
 
 /* ── Comparison table ──────────────────────────────────────────────────── */
 .compare-section {
@@ -1270,7 +1312,11 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
 
     <p class="hero-sub">
       Kamu punya online shop, tapi pusing harga admin marketplace makin naik? Atau pengen punya toko sendiri tapi ribet urus teknisnya? Kami solusinya!<br/><br/>
-      Buka online shop kamu melalui website kami, untuk urusan teknis kami yang bantu. Hanya dengan 15 menit, kamu bisa jualan melalui e-talase. Tunggu apa lagi?
+      Buka online shop kamu melalui website kami, untuk urusan teknis kami yang bantu. Daftar hari ini, toko kamu langsung aktif dengan produk pertama dari Shopee kamu.
+    </p>
+
+    <p class="hero-fit">
+      Cocok buat kamu yang udah jualan rutin di marketplace dan punya pelanggan yang sering balik order lagi.
     </p>
 
     <!-- Waitlist form (hero) -->
@@ -1466,6 +1512,9 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
               <span>Terima transfer bank langsung — tanpa biaya transaksi tambahan, pendapatan 100% masuk ke rekening kamu</span>
             </li>
           </ul>
+          <p class="feature-note" style="margin-top:14px;font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.55;max-width:380px;padding-left:12px;border-left:2px solid color-mix(in oklch,var(--sage) 35%,transparent);">
+            Pembeli upload bukti transfer, kamu yang konfirmasi sebelum pesanan diproses. Bukan cuma soal kepercayaan — ini perlindungan kamu dari klaim palsu atau penyalahgunaan kode promo.
+          </p>
         </div>
       </div>
     </article>
@@ -1518,6 +1567,31 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
             </li>
           </ul>
         </div>
+      </div>
+    </article>
+
+    <!-- Feature 02b — Historical Order Link -->
+    <article class="feature-card feature-subcard" style="background:color-mix(in oklch,var(--terra) 4%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 18%,var(--line));">
+      <div class="feature-subcard-inner">
+        <div class="feature-tag-pill" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);">
+          <span class="dot" style="background:var(--terra);"></span>#02 · LANJUTAN
+        </div>
+        <h3>Pelanggan balik lagi? Kirim link yang sama.</h3>
+        <p class="desc">Riwayat pembelian mereka otomatis muncul — kamu nggak perlu nanya ulang atau inget-inget siapa beli apa.</p>
+        <ul class="feature-bullets">
+          <li class="feature-bullet">
+            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+            <span>Satu link bisa dipakai berkali-kali untuk pelanggan yang sama</span>
+          </li>
+          <li class="feature-bullet">
+            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+            <span>Produk yang pernah dibeli otomatis muncul saat order ulang</span>
+          </li>
+          <li class="feature-bullet">
+            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
+            <span>Nggak perlu rebuild keranjang dari nol tiap kali ada repeat order</span>
+          </li>
+        </ul>
       </div>
     </article>
 
@@ -1590,7 +1664,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
           <div class="compare-head" role="columnheader"></div>
           <div class="compare-head label" role="columnheader">Lewat<br>marketplace</div>
           <div class="compare-head label" role="columnheader">Bangun web<br>sendiri</div>
-          <div class="compare-head etal" role="columnheader">Pakai<br>e-talase</div>
+          <div class="compare-head etal" role="columnheader">Pakai e-talase<br><span style="font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:0;text-transform:none;opacity:.85;">(toko + marketplace, satu dashboard)</span></div>
         </div>
         <!-- Rows -->
         <div role="row">
@@ -1658,32 +1732,32 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
 <section class="perks-section" aria-labelledby="perks-heading">
   <div class="section-head">
     <p class="kicker">Untungnya gabung sekarang · 04</p>
-    <h2 class="serif-h2" id="perks-heading">Empat alasan <em style="font-style:italic;color:var(--accent);">gabung lebih awal.</em></h2>
+    <h2 class="serif-h2" id="perks-heading">Lifetime deal — <em style="font-style:italic;color:var(--accent);">gabung sebelum harganya berubah.</em></h2>
   </div>
   <div class="perks-grid">
     <article class="perk-card" style="background:color-mix(in oklch,var(--sage) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--sage) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--sage) 18%,transparent);">A</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--sage) 18%,var(--paper));color:var(--sage);"><span class="dot" style="background:var(--sage);"></span>PERK · A</div>
-      <h3>Gratis bulan pertama</h3>
-      <p>Promo soft launch: paket Starter gratis 100% di bulan pertama. Mulai jualan tanpa biaya.</p>
+      <h3>Sekali bayar, akses selamanya</h3>
+      <p>Rp 2.500.000 untuk lifetime deal — termasuk semua fitur yang akan datang (mobile app, integrasi otomatis ke Shopee).</p>
     </article>
     <article class="perk-card" style="background:color-mix(in oklch,var(--terra) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--terra) 18%,transparent);">B</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);"><span class="dot" style="background:var(--terra);"></span>PERK · B</div>
-      <h3>Diskon 50% setahun penuh</h3>
-      <p>Setelah bulan pertama, nikmati potongan 50% untuk paket Starter selama satu tahun penuh.</p>
+      <h3>Coba dulu sebulan gratis</h3>
+      <p>Bulan pertama gratis sebagai trial. Rasakan dulu manfaatnya, baru putuskan untuk lanjut ke lifetime deal.</p>
     </article>
     <article class="perk-card" style="background:color-mix(in oklch,var(--butter) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--butter) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--butter) 18%,transparent);">C</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--butter) 18%,var(--paper));color:var(--terra);"><span class="dot" style="background:var(--butter);"></span>PERK · C</div>
-      <h3>Dukungan langsung</h3>
-      <p>Kami siap bantu lewat call dan online meeting untuk proses setup dan dukungan sehari-hari.</p>
+      <h3>Harga ini cuma sebelum kami production</h3>
+      <p>Begitu aplikasi mobile dan integrasi Shopee resmi rilis, harga reguler jadi langganan bulanan. Yang ambil lifetime deal sekarang nggak kena biaya bulanan itu lagi.</p>
     </article>
     <article class="perk-card" style="background:color-mix(in oklch,var(--rose) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--rose) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--rose) 18%,transparent);">D</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--rose) 18%,var(--paper));color:var(--rose);"><span class="dot" style="background:var(--rose);"></span>PERK · D</div>
-      <h3>Suaramu inspirasi kami</h3>
-      <p>Kamu yang menentukan fitur mana yang diprioritaskan. Kami kembangkan, kamu coba, kami sempurnakan.</p>
+      <h3>Dukungan langsung</h3>
+      <p>Kami siap bantu lewat call dan online meeting untuk proses setup dan dukungan sehari-hari.</p>
     </article>
   </div>
 </section>
