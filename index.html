@@ -849,37 +849,73 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   font-weight: 700;
 }
 .feature-bullet span { font-family: var(--sans); font-size: var(--body); color: var(--ink); line-height: 1.45; }
-.feature-subcard {
-  padding: calc(var(--feat-pad) * 0.75) var(--feat-pad);
-  border-radius: 18px;
+.feature-prompt {
+  margin-top: 22px;
+  padding: 18px 22px;
+  border-radius: 12px;
+  background: color-mix(in oklch, var(--paper) 75%, white);
+  border: 1px dashed color-mix(in oklch, var(--terra) 32%, var(--line));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
 }
-.feature-subcard .feature-subcard-inner {
-  max-width: 720px;
-  margin: 0 auto;
-  text-align: center;
+.feature-prompt-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  background: color-mix(in oklch, var(--terra) 14%, var(--paper));
+  color: var(--terra);
+  margin-bottom: 10px;
 }
-.feature-subcard .feature-tag-pill { margin: 0 auto 12px; }
-.feature-subcard h3 {
+.feature-prompt-tag .dot { width: 5px; height: 5px; border-radius: 999px; }
+.feature-prompt h4 {
   font-family: var(--serif);
-  font-size: var(--h3);
-  margin: 0 0 14px;
+  font-size: calc(var(--h3) * 0.78);
+  margin: 0 0 8px;
   color: var(--ink);
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -.01em;
   font-weight: 400;
 }
-.feature-subcard .desc {
+.feature-prompt p {
   font-family: var(--sans);
-  font-size: var(--body);
+  font-size: calc(var(--body) * 0.96);
   color: var(--muted);
-  margin: 0 auto 18px;
-  line-height: 1.55;
-  max-width: 560px;
+  margin: 0 0 12px;
+  line-height: 1.5;
 }
-.feature-subcard .feature-bullets {
-  max-width: 560px;
-  margin: 0 auto;
-  text-align: left;
+.feature-prompt-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.feature-prompt-bullets li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-family: var(--sans);
+  font-size: calc(var(--body) * 0.92);
+  color: var(--ink);
+  line-height: 1.45;
+}
+.feature-prompt-bullets .check {
+  flex-shrink: 0;
+  margin-top: 2px;
+  width: 14px; height: 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  font-weight: 700;
+  background: color-mix(in oklch, var(--terra) 18%, var(--paper));
+  color: var(--terra);
 }
 
 /* ── Comparison table ──────────────────────────────────────────────────── */
@@ -1568,29 +1604,15 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
           </ul>
         </div>
       </div>
-    </article>
 
-    <!-- Feature 02b — Historical Order Link -->
-    <article class="feature-card feature-subcard" style="background:color-mix(in oklch,var(--terra) 4%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 18%,var(--line));">
-      <div class="feature-subcard-inner">
-        <div class="feature-tag-pill" style="background:color-mix(in oklch,var(--terra) 18%,var(--paper));color:var(--terra);">
-          <span class="dot" style="background:var(--terra);"></span>#02 · LANJUTAN
-        </div>
-        <h3>Pelanggan balik lagi? Kirim link yang sama.</h3>
-        <p class="desc">Riwayat pembelian mereka otomatis muncul — kamu nggak perlu nanya ulang atau inget-inget siapa beli apa.</p>
-        <ul class="feature-bullets">
-          <li class="feature-bullet">
-            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
-            <span>Satu link bisa dipakai berkali-kali untuk pelanggan yang sama</span>
-          </li>
-          <li class="feature-bullet">
-            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
-            <span>Produk yang pernah dibeli otomatis muncul saat order ulang</span>
-          </li>
-          <li class="feature-bullet">
-            <span class="check-icon" style="background:color-mix(in oklch,var(--terra) 20%,var(--paper));color:var(--terra);">✓</span>
-            <span>Nggak perlu rebuild keranjang dari nol tiap kali ada repeat order</span>
-          </li>
+      <!-- Lanjutan — Historical Order Link (nested prompt) -->
+      <div class="feature-prompt">
+        <h4>Pelanggan balik lagi? Kirim link yang sama.</h4>
+        <p>Riwayat pembelian mereka otomatis muncul — kamu nggak perlu nanya ulang atau inget-inget siapa beli apa.</p>
+        <ul class="feature-prompt-bullets">
+          <li><span class="check">✓</span><span>Satu link bisa dipakai berkali-kali untuk pelanggan yang sama</span></li>
+          <li><span class="check">✓</span><span>Produk yang pernah dibeli otomatis muncul saat order ulang</span></li>
+          <li><span class="check">✓</span><span>Nggak perlu rebuild keranjang dari nol tiap kali ada repeat order</span></li>
         </ul>
       </div>
     </article>
