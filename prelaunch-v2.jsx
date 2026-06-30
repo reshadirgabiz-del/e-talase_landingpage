@@ -314,7 +314,7 @@ function WaitlistForm({ variant = 'light', cta = 'Daftar sekarang', placeholder 
           color: onDark ? 'var(--hi-paper)' : 'var(--hi-ink)',
           flex: 1, padding: '8px 0',
         }}>
-          Makasih — kami kabari begitu akun kamu siap.
+          Terima kasih — kami akan menghubungi kamu segera setelah akun siap.
         </span>
       </div>
     );
