@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Primary meta -->
-<title>e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace</title>
-<meta name="description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama, tanpa kartu kredit." />
+<title>e-talase — Toko online kamu sendiri, kelola bisnis dari satu tempat</title>
+<meta name="description" content="e-talase membantu seller Indonesia kelola toko online, pesanan, dan pelanggan dari satu tempat — sambil tetap jualan di marketplace. Gratis bulan pertama, tanpa kartu kredit." />
 <meta name="robots" content="index, follow" />
 <meta name="theme-color" content="#5d6b40" />
 <link rel="canonical" href="https://e-talase.com/" />
@@ -15,8 +15,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://e-talase.com/" />
 <meta property="og:site_name" content="e-talase" />
-<meta property="og:title" content="e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace" />
-<meta property="og:description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama, tanpa kartu kredit." />
+<meta property="og:title" content="e-talase — Toko online kamu sendiri, kelola bisnis dari satu tempat" />
+<meta property="og:description" content="e-talase membantu seller Indonesia kelola toko online, pesanan, dan pelanggan dari satu tempat — sambil tetap jualan di marketplace. Gratis bulan pertama, tanpa kartu kredit." />
 <meta property="og:image" content="https://e-talase.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -26,8 +26,8 @@
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@etalase" />
-<meta name="twitter:title" content="e-talase — Toko online kamu sendiri, bukan sekadar lapak marketplace" />
-<meta name="twitter:description" content="e-talase membantu seller mandiri Indonesia punya toko online sendiri — server, domain, dan teknis kami yang urus. Mulai gratis bulan pertama." />
+<meta name="twitter:title" content="e-talase — Toko online kamu sendiri, kelola bisnis dari satu tempat" />
+<meta name="twitter:description" content="e-talase membantu seller Indonesia kelola toko online, pesanan, dan pelanggan dari satu tempat — sambil tetap jualan di marketplace. Gratis bulan pertama, tanpa kartu kredit." />
 <meta name="twitter:image" content="https://e-talase.com/og-image.png" />
 
 <!-- Favicon -->
@@ -396,92 +396,81 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   line-height: 1.45;
 }
 
-/* ── Waitlist form ─────────────────────────────────────────────────────── */
-.wl-form {
+/* ── Calls to action ──────────────────────────────────────────────────── */
+.cta-group {
   display: flex;
-  gap: 6px;
-  padding: 6px;
-  border-radius: 999px;
-  background: var(--card);
-  border: 1px solid var(--line);
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
   max-width: 460px;
-  width: 100%;
   margin: 0 auto;
 }
-.wl-form.dark {
-  background: rgba(244,237,224,.08);
-  border-color: rgba(244,237,224,.18);
-}
-.wl-form input[type="email"] {
-  flex: 1;
-  min-width: 0;
-  padding: 10px 14px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  color: var(--ink);
-  appearance: none;
-  -webkit-appearance: none;
-}
-.wl-form.dark input[type="email"] { color: var(--paper); }
-.wl-form input::placeholder { color: color-mix(in oklch, currentColor 55%, transparent); }
-.wl-form input[type="email"]:-webkit-autofill,
-.wl-form input[type="email"]:-webkit-autofill:hover,
-.wl-form input[type="email"]:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px rgba(251,246,236,0) inset !important;
-  -webkit-text-fill-color: var(--ink) !important;
-  transition: background-color 9999s ease-in-out 0s;
-}
-.wl-form.dark input[type="email"]:-webkit-autofill,
-.wl-form.dark input[type="email"]:-webkit-autofill:hover,
-.wl-form.dark input[type="email"]:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px rgba(30,28,20,0) inset !important;
-  -webkit-text-fill-color: var(--paper) !important;
-}
-.wl-form button {
-  padding: 10px 18px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--on);
-  font-size: 13px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  white-space: nowrap;
-}
-.wl-form.dark button { background: var(--butter); color: var(--ink); }
-.wl-success {
-  display: none;
-  align-items: center;
-  gap: 12px;
-  padding: 4px 6px 4px 18px;
-  border-radius: 999px;
-  background: color-mix(in oklch, var(--sage) 12%, var(--paper));
-  border: 1px solid color-mix(in oklch, var(--sage) 30%, var(--line));
-  max-width: 460px;
-  width: 100%;
-  margin: 0 auto;
-}
-.wl-success.dark {
-  background: rgba(244,237,224,.06);
-  border-color: rgba(244,237,224,.16);
-}
-.wl-success .check {
-  width: 26px; height: 26px;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--on);
+.cta-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: var(--on);
   font-size: 14px;
-  font-weight: 600;
-  flex-shrink: 0;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
 }
-.wl-success.dark .check { background: var(--butter); color: var(--ink); }
-.wl-success span { font-size: 14px; padding: 8px 0; }
-.wl-success.dark span { color: var(--paper); }
+.cta-button.secondary { background: transparent; color: var(--accent); }
+.cta-group.dark .cta-button.primary { background: var(--butter); border-color: var(--butter); color: var(--ink); }
+.cta-group.dark .cta-button.secondary { border-color: rgba(244,237,224,.55); color: var(--paper); }
+
+/* ── Contact modal ────────────────────────────────────────────────────── */
+.contact-modal {
+  width: min(560px, calc(100% - 32px));
+  max-height: calc(100vh - 32px);
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--card);
+  color: var(--ink);
+  box-shadow: 0 30px 90px rgba(28,26,20,.28);
+  overflow: auto;
+}
+.contact-modal::backdrop { background: rgba(28,26,20,.62); backdrop-filter: blur(3px); }
+.contact-modal-inner { padding: 30px; }
+.contact-modal-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+.contact-modal h2 { font-family: var(--serif); font-size: 36px; font-weight: 400; line-height: 1.05; margin: 6px 0 8px; }
+.contact-modal-intro { color: var(--muted); font-size: 14px; line-height: 1.55; margin: 0; }
+.modal-close {
+  width: 36px; height: 36px; flex: 0 0 36px;
+  border: 1px solid var(--line); border-radius: 999px;
+  background: var(--paper); color: var(--ink); font-size: 22px;
+  line-height: 1; cursor: pointer;
+}
+.contact-form { display: grid; gap: 16px; }
+.contact-field { display: grid; gap: 7px; text-align: left; }
+.contact-field label { font-size: 13px; font-weight: 500; }
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  outline: none;
+}
+.contact-field textarea { min-height: 130px; resize: vertical; }
+.contact-field input:focus,
+.contact-field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px color-mix(in oklch,var(--accent) 18%,transparent); }
+.contact-submit { width: 100%; margin-top: 2px; }
+.contact-status { display: none; font-size: 13px; line-height: 1.5; margin: 0; }
+.contact-status.error { display: block; color: #a6382a; }
+.contact-status.success { display: block; color: var(--sage); }
+.contact-submit:disabled { opacity: .65; cursor: wait; }
 
 /* ── Hero mock ─────────────────────────────────────────────────────────── */
 .hero-mock-wrap {
@@ -1282,8 +1271,10 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   .chip { display: none !important; }
   .problem-grid { grid-template-columns: 1fr !important; }
   .perks-grid  { grid-template-columns: 1fr !important; }
-  .wl-form { flex-direction: column !important; gap: 8px !important; padding: 8px !important; border-radius: 16px !important; }
-  .wl-form button, .wl-form input { width: 100%; }
+  .cta-group { display: grid; width: 100%; }
+  .cta-button { width: 100%; }
+  .contact-modal-inner { padding: 22px; }
+  .contact-modal h2 { font-size: 30px; }
   .feature-row, .feature-row.flip { grid-template-columns: 1fr !important; }
   .feature-mock, .feature-row.flip .feature-mock { order: 1 !important; }
   .feature-copy, .feature-row.flip .feature-copy { order: 2 !important; }
@@ -1343,27 +1334,20 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
 
     <h1 class="hero-h1" id="hero-heading">
       Buat toko sendiri,<br>
-      <em>untungnya 100% untuk kamu!</em>
+      <em>kelola semua penjualan dari satu tempat.</em>
     </h1>
 
     <p class="hero-sub">
-      Komisi 0% — pembeli transfer langsung ke rekening kamu, kamu yang konfirmasi, dan data pelanggan tetap milikmu. Setup toko bareng tim kami, dan toko kamu siap jualan besok.
+      Marketplace untuk mendapatkan pelanggan. Toko sendiri untuk jadi pelanggan setia.<br><br>
+      Pembeli transfer langsung ke rekening kamu, kamu yang konfirmasi, dan semua data pelanggan tetap milikmu. Setup toko bareng tim kami — aktif dalam 24 jam.
     </p>
 
-    <!-- Waitlist form (hero) -->
-    <div class="wl-form-wrap" id="wl-hero-wrap">
-      <form class="wl-form" id="wl-hero" novalidate>
-        <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
-        <button type="submit">Daftar sekarang →</button>
-      </form>
-      <p class="wl-error" style="display:none;color:#c0392b;font-size:13px;margin-top:6px;">Maaf, terjadi kesalahan. Silakan coba lagi.</p>
-      <div class="wl-success" id="wl-hero-ok" role="status">
-        <span class="check">✓</span>
-        <span>Terima kasih — kami akan menghubungi kamu segera setelah akun siap.</span>
-      </div>
+    <div class="cta-group">
+      <a class="cta-button primary" href="https://app.e-talase.com">Daftar sekarang →</a>
+      <button class="cta-button secondary" type="button" data-contact-open>Hubungi kami</button>
     </div>
 
-    <p class="hero-micro">gratis bulan pertama · tanpa kartu kredit · cukup email kamu</p>
+    <p class="hero-micro">gratis bulan pertama · tanpa kartu kredit · setup dibantu tim kami</p>
   </div>
 
   <!-- Hero product mockup -->
@@ -1540,7 +1524,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
             </li>
             <li class="feature-bullet">
               <span class="check-icon" style="background:color-mix(in oklch,var(--sage) 20%,var(--paper));color:var(--sage);">✓</span>
-              <span>Terima transfer bank langsung — tanpa biaya transaksi tambahan, pendapatan 100% masuk ke rekening kamu</span>
+              <span>Terima pembayaran langsung ke rekening kamu — 100% masuk ke kantong kamu</span>
             </li>
           </ul>
           <p class="feature-note" style="margin-top:14px;font-family:var(--sans);font-size:13px;color:var(--muted);line-height:1.55;max-width:380px;padding-left:12px;border-left:2px solid color-mix(in oklch,var(--sage) 35%,transparent);">
@@ -1681,7 +1665,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
           <div class="compare-head" role="columnheader"></div>
           <div class="compare-head label" role="columnheader">Lewat<br>marketplace</div>
           <div class="compare-head label" role="columnheader">Bangun web<br>sendiri</div>
-          <div class="compare-head etal" role="columnheader">Pakai e-talase<br><span style="font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:0;text-transform:none;opacity:.85;">(toko + marketplace, satu dashboard)</span></div>
+          <div class="compare-head etal" role="columnheader">Pakai e-talase<br><span style="font-family:var(--sans);font-size:10px;font-weight:400;letter-spacing:0;text-transform:none;opacity:.85;">(+ marketplace kamu sekarang)</span></div>
         </div>
         <!-- Rows -->
         <div role="row">
@@ -1706,19 +1690,13 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
           <div class="compare-cell row-label" role="cell">Waktu tayang</div>
           <div class="compare-cell" role="cell">Instan</div>
           <div class="compare-cell" role="cell">2 minggu – 3 bulan</div>
-          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Hari ini juga</span></div>
+          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Dalam 24 jam</span></div>
         </div>
         <div role="row">
           <div class="compare-cell row-label" role="cell">Butuh tim teknis</div>
           <div class="compare-cell" role="cell">Nggak</div>
           <div class="compare-cell" role="cell">Tinggi (developer + maintenance)</div>
           <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak perlu</span></div>
-        </div>
-        <div role="row">
-          <div class="compare-cell row-label" role="cell">Ketergantungan</div>
-          <div class="compare-cell" role="cell">Tinggi ke platform</div>
-          <div class="compare-cell" role="cell">Nggak ada</div>
-          <div class="compare-cell etal-cell" role="cell"><span class="tick">✓</span><span>Nggak ada</span></div>
         </div>
       </div>
     </div>
@@ -1738,7 +1716,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
         <div class="chat-bubble them">Halo, saya Dirga, pendiri e-talase.</div>
         <div class="chat-bubble them">Awalnya saya bikin ini untuk bantu istri saya, yang lagi cari alternatif dari marketplace dengan biaya yang mahal.</div>
         <div class="chat-bubble them">Dari situ, e-talase berkembang: ada fitur untuk kerja bareng tim — misalnya mengelola pesanan dan pengiriman bersama — plus cara mudah memindahkan percakapan dari media sosial ke platform lewat order link.</div>
-        <div class="chat-bubble them">Tujuannya sederhana: bikin jualan online terasa lebih ringan, dan keuntungannya benar-benar jadi milik kamu.</div>
+        <div class="chat-bubble them">Tujuannya sederhana: bikin jualan online terasa lebih ringan, dan bikin pelanggan makin setia beli dari kamu.</div>
         <p class="founder-signoff">— Dirga, pendiri e-talase</p>
       </div>
     </div>
@@ -1756,7 +1734,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--sage) 18%,transparent);">A</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--sage) 18%,var(--paper));color:var(--sage);"><span class="dot" style="background:var(--sage);"></span>PERK · A</div>
       <h3>Sekali bayar, akses selamanya</h3>
-      <p>Rp 2.500.000 untuk lifetime deal — termasuk semua fitur yang akan datang (mobile app, integrasi otomatis ke Shopee).</p>
+      <p>Rp 2.500.000 untuk lifetime deal — termasuk semua fitur yang akan datang: mobile app, integrasi marketplace, dan lebih banyak lagi.</p>
     </article>
     <article class="perk-card" style="background:color-mix(in oklch,var(--terra) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--terra) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--terra) 18%,transparent);">B</span>
@@ -1768,7 +1746,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--butter) 18%,transparent);">C</span>
       <div class="perk-tag-pill" style="background:color-mix(in oklch,var(--butter) 18%,var(--paper));color:var(--terra);"><span class="dot" style="background:var(--butter);"></span>PERK · C</div>
       <h3>Harga ini cuma sebelum kami production</h3>
-      <p>Begitu aplikasi mobile dan integrasi Shopee resmi rilis, harga reguler jadi langganan bulanan. Yang ambil lifetime deal sekarang nggak kena biaya bulanan itu lagi.</p>
+      <p>Begitu aplikasi mobile dan integrasi marketplace kami resmi rilis, harga reguler jadi langganan bulanan. Yang ambil lifetime deal sekarang nggak kena biaya bulanan itu lagi.</p>
     </article>
     <article class="perk-card" style="background:color-mix(in oklch,var(--rose) 8%,var(--paper));border:1px solid color-mix(in oklch,var(--rose) 24%,var(--line));">
       <span class="perk-bg-letter" style="color:color-mix(in oklch,var(--rose) 18%,transparent);">D</span>
@@ -1817,6 +1795,15 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
     </div>
 
     <div class="roadmap-item">
+      <div class="roadmap-dot-col"><div class="roadmap-dot" style="background:var(--sage);"></div></div>
+      <div class="roadmap-card">
+        <div class="roadmap-label"><span style="color:var(--sage);">NANTI · 2027</span></div>
+        <h4>Integrasi marketplace</h4>
+        <p>Sinkronisasi pesanan antara e-talase dan marketplace seperti Shopee dan Tokopedia — semua masuk ke satu dashboard.</p>
+      </div>
+    </div>
+
+    <div class="roadmap-item">
       <div class="roadmap-dot-col"><div class="roadmap-dot" style="background:var(--muted);"></div></div>
       <div class="roadmap-card">
         <div class="roadmap-label"><span style="color:var(--muted);">MASIH JAUH · Jan 2027</span></div>
@@ -1838,17 +1825,11 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   <div class="footer-content">
     <p class="footer-kicker">Promo soft launch · Gratis bulan pertama</p>
     <h2 class="footer-h2">Daftar sekarang, <em>mulai jualan.</em></h2>
-    <p class="footer-sub">Tinggalkan email kamu. Kami kabari begitu akun kamu siap — tanpa spam, tanpa jual data.</p>
+    <p class="footer-sub">Buat akun sekarang, atau hubungi tim kami kalau ada yang ingin kamu tanyakan.</p>
 
-    <!-- Waitlist form (footer) -->
-    <form class="wl-form dark" id="wl-footer" novalidate>
-      <input type="email" placeholder="nama@toko.com" required autocomplete="email" aria-label="Alamat email" />
-      <button type="submit">Daftar sekarang →</button>
-    </form>
-    <p class="wl-error" style="display:none;color:#f1948a;font-size:13px;margin-top:6px;">Maaf, terjadi kesalahan. Silakan coba lagi.</p>
-    <div class="wl-success dark" id="wl-footer-ok" role="status">
-      <span class="check">✓</span>
-      <span>Terima kasih — kami akan menghubungi kamu segera setelah akun siap.</span>
+    <div class="cta-group dark">
+      <a class="cta-button primary" href="https://app.e-talase.com">Daftar sekarang →</a>
+      <button class="cta-button secondary" type="button" data-contact-open>Hubungi kami</button>
     </div>
   </div>
 
@@ -1865,6 +1846,35 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
     </nav>
   </div>
 </footer>
+
+<dialog class="contact-modal" id="contact-modal" aria-labelledby="contact-title">
+  <div class="contact-modal-inner">
+    <div class="contact-modal-head">
+      <div>
+        <p class="kicker">Hubungi tim e-talase</p>
+        <h2 id="contact-title">Ada yang ingin ditanyakan?</h2>
+        <p class="contact-modal-intro">Isi formulir ini dan tim kami akan menghubungi kamu melalui email.</p>
+      </div>
+      <button class="modal-close" type="button" data-contact-close aria-label="Tutup formulir">×</button>
+    </div>
+    <form class="contact-form" id="contact-form">
+      <div class="contact-field">
+        <label for="contact-name">Nama</label>
+        <input id="contact-name" name="name" type="text" autocomplete="name" maxlength="120" required />
+      </div>
+      <div class="contact-field">
+        <label for="contact-email">Email</label>
+        <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+      </div>
+      <div class="contact-field">
+        <label for="contact-remarks">Catatan</label>
+        <textarea id="contact-remarks" name="remarks" maxlength="5000" required placeholder="Ceritakan kebutuhan atau pertanyaan kamu."></textarea>
+      </div>
+      <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+      <button class="cta-button primary contact-submit" type="submit">Kirim pesan →</button>
+    </form>
+  </div>
+</dialog>
 
 <script>
 /* ── Chat animation ──────────────────────────────────────────────────── */
@@ -1903,7 +1913,7 @@ h1.hero-h1 em { font-style: italic; color: var(--accent); }
   }
 })();
 
-/* ── Waitlist forms ───────────────────────────────────────────────────── */
+/* ── Contact modal ────────────────────────────────────────────────────── */
 var BACKEND_URL = 'https://e-talase-landingpage-backend.vercel.app';
 
 function getUtmParams() {
@@ -1915,50 +1925,74 @@ function getUtmParams() {
   };
 }
 
-function setupForm(formId, successId) {
-  var form    = document.getElementById(formId);
-  var success = document.getElementById(successId);
-  if (!form) return;
+var contactModal = document.getElementById('contact-modal');
+var contactForm = document.getElementById('contact-form');
+var contactStatus = document.getElementById('contact-status');
 
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var email = form.querySelector('input[type="email"]').value.trim();
-    if (!email) return;
+document.querySelectorAll('[data-contact-open]').forEach(function (button) {
+  button.addEventListener('click', function () {
+    contactStatus.className = 'contact-status';
+    contactStatus.textContent = '';
+    contactModal.showModal();
+    document.getElementById('contact-name').focus();
+  });
+});
 
-    var btn = form.querySelector('button[type="submit"]');
-    if (btn) btn.disabled = true;
+document.querySelectorAll('[data-contact-close]').forEach(function (button) {
+  button.addEventListener('click', function () { contactModal.close(); });
+});
 
-    var payload = Object.assign({ email: email }, getUtmParams());
-    // Remove undefined keys
-    Object.keys(payload).forEach(function (k) { if (payload[k] === undefined) delete payload[k]; });
+contactModal.addEventListener('click', function (event) {
+  if (event.target === contactModal) contactModal.close();
+});
 
-    function doRedirect() {
-      form.style.display = 'none';
-      if (success) success.style.display = 'flex';
-      setTimeout(function () {
-        window.location.href = 'https://app.e-talase.com';
-      }, 1200);
-    }
+contactForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  if (!contactForm.reportValidity()) return;
 
-    fetch(BACKEND_URL + '/waitlist', {
+  var submitButton = contactForm.querySelector('button[type="submit"]');
+  var formData = new FormData(contactForm);
+  var payload = Object.assign({
+    name: formData.get('name').trim(),
+    email: formData.get('email').trim(),
+    remarks: formData.get('remarks').trim(),
+  }, getUtmParams());
+
+  Object.keys(payload).forEach(function (key) {
+    if (payload[key] === undefined) delete payload[key];
+  });
+
+  submitButton.disabled = true;
+  submitButton.textContent = 'Mengirim…';
+  contactStatus.className = 'contact-status';
+  contactStatus.textContent = '';
+
+  fetch(BACKEND_URL + '/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     })
-      .then(function (res) {
-        if (res.ok) {
-          try { gtag('event', 'waitlist_signup', { form_id: formId }); } catch (_) {}
-        }
-        doRedirect();
-      })
-      .catch(function () {
-        doRedirect();
+    .then(function (response) {
+      return response.json().catch(function () { return {}; }).then(function (body) {
+        if (!response.ok) throw new Error(body.message || 'Pesan belum berhasil dikirim.');
+        return body;
       });
-  });
-}
-
-setupForm('wl-hero',   'wl-hero-ok');
-setupForm('wl-footer', 'wl-footer-ok');
+    })
+    .then(function (body) {
+      contactStatus.className = 'contact-status success';
+      contactStatus.textContent = body.message || 'Terima kasih! Pesan kamu sudah kami terima.';
+      contactForm.reset();
+      try { gtag('event', 'contact_submit'); } catch (_) {}
+    })
+    .catch(function (error) {
+      contactStatus.className = 'contact-status error';
+      contactStatus.textContent = error.message || 'Pesan belum berhasil dikirim. Silakan coba lagi.';
+    })
+    .finally(function () {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Kirim pesan →';
+    });
+});
 
 /* ── Section read tracking ───────────────────────────────────────────── */
 (function () {
